@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>717760602350-cffd9qstepkh2rdt8iogtdmgqukp5s43.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.717760602350-cffd9qstepkh2rdt8iogtdmgqukp5s43</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>717760602350-e676mj7c1eaidmddq9e688hadsb1a7co.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCuDnp9cc4AGajCnVIzNKuRX5KUalL1fTA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>717760602350</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.gwtcoder.YogaApp</string>
+	<key>PROJECT_ID</key>
+	<string>yogaapp-2a7ad</string>
+	<key>STORAGE_BUCKET</key>
+	<string>yogaapp-2a7ad.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:717760602350:ios:474d54ef8cf777cd0693ff</string>
+	<key>DATABASE_URL</key>
+	<string>https://yogaapp-2a7ad.firebaseio.com</string>
+</dict>
+</plist>
