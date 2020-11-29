@@ -38,7 +38,13 @@ class CardViewController: UITableViewCell {
         likeButton.setTitle("\(card.likes)", for: .normal)
         likeButton.sizeToFit()
         
-//        self.imageMain.image = card.thumbPath![0]
+        getImage(url: card.thumbPath![0]) { (image) in
+            if let image = image {
+                self.imageMain.image = image
+            }
+        }
+        
+//        self.imageMain.image =
 
         
         imageSlider.dataSource = self
@@ -87,18 +93,44 @@ class CardViewController: UITableViewCell {
 
 extension CardViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return card.thumbPath!.count
-        return 0
+        return card.thumbPath!.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = imageSlider.dequeueReusableCell(withReuseIdentifier: "itemOfImagesSlider", for: indexPath) as! ImageOfSlider
         
-        for _ in card.thumbPath! {
-            // ADD IMAGE
-        }
+        cell.initCell(path: card.thumbPath![indexPath.row])
         
         return cell
     }
 }
 
+
+func getImage(url: String.SubSequence, comletion: @escaping (UIImage?) -> ()) {
+    let storage = Storage.storage().reference()
+    
+    let filePath = "\(url).jpeg"
+    let fileURL = NSURL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!).appendingPathComponent(filePath)
+    
+    let storageRef = storage.child("thumbnails/\(url).jpeg")
+    
+    if let imageData = NSData(contentsOf: fileURL!) {
+        let image = UIImage(data: imageData as Data)
+        
+        comletion(image)
+    } else {
+        storageRef.write(toFile: fileURL!) { url, error in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                if let imageData = NSData(contentsOf: fileURL!) {
+                    let image = UIImage(data: imageData as Data)
+                    
+                    comletion(image)
+                } else {
+                    comletion(nil)
+                }
+            }
+        }
+    }
+}

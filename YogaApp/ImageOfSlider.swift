@@ -12,10 +12,14 @@ class ImageOfSlider: UICollectionViewCell {
     
     @IBOutlet weak var image: UIImageView!
    
-    func initCell(url: URL?) {
+    func initCell(path: String.SubSequence) {
         updateUI()
         
-//        image.load(url: url)
+        getImage(url: path) { (image) in
+            if let image = image {
+                self.image.image = image
+            }
+        }
     }
     
     func updateUI() {

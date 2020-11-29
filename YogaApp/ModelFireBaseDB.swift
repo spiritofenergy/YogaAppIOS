@@ -14,7 +14,7 @@ class Card {
     var title: String?
     var shortDescription: String?
     var description: String?
-    var thumbPath: [UIImage?]?
+    var thumbPath: [String.SubSequence]?
     
     var likes: Int = 0
     var comments: Int = 0
@@ -42,24 +42,9 @@ class ModelFireBaseDB: NSObject {
                     newCard.description = (document["description"] as! String)
                     newCard.likes = (document["likes"] as! Int)
                     newCard.comments = (document["comments"] as! Int)
-//                    let photos = (document["thumbPath"] as! String).split(separator: " ")
+                    let photos = (document["thumbPath"] as! String).split(separator: " ")
                     
-//                    var images: [UIImage] = []
-//
-//                    for item in photos {
-//                        let starsRef = self.storage.child("thumbnails/\(item).jpeg")
-//
-//                        starsRef.getData(maxSize: 5 * 1024 * 1024) { data, error in
-//                            if let error = error {
-//                                print(error.localizedDescription)
-//                            } else {
-//                                let image = UIImage(data: data!)
-//                                images.append(image!)
-//                            }
-//                        }
-//                    }
-                    
-//                    newCard.thumbPath = images
+                    newCard.thumbPath = photos
                     
                     self.cards.append(newCard)
                 }
@@ -68,5 +53,4 @@ class ModelFireBaseDB: NSObject {
             }
         }
     }
-    
 }
