@@ -52,21 +52,17 @@ class AuthController: UIViewController, GIDSignInDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
+        
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         
-        // Если аутентификация произведена? то показываем главное View
+        // Если аутентификация произведена, то показываем главное View
         if Auth.auth().currentUser != nil {
             let sb: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let nextViewController = sb.instantiateViewController(withIdentifier: "MainInputInAppID")
             nextViewController.modalPresentationStyle = .fullScreen
             present(nextViewController, animated: true, completion: nil)
         }
-        
     }
     
     @IBAction func signInGoogle(_ sender: Any) {
@@ -76,15 +72,5 @@ class AuthController: UIViewController, GIDSignInDelegate {
 
     @IBAction func signInInst(_ sender: Any) {
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

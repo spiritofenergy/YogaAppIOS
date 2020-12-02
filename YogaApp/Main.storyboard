@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxT-3Y-GOX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="89.732142857142847"/>
+            <point key="canvasLocation" x="132" y="150"/>
         </scene>
         <!--Список-->
         <scene sceneID="1Dr-h2-FMM">
@@ -207,6 +207,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8U-rG-f53">
                                                             <rect key="frame" x="2" y="2" width="69" height="31"/>
                                                             <state key="normal" title="Добавить"/>
+                                                            <connections>
+                                                                <action selector="addAction:" destination="Aoy-xy-iYt" eventType="touchUpInside" id="xv2-4d-Spq"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -300,7 +303,11 @@
                                 <segue destination="oWz-yP-wCE" kind="show" id="W9N-wS-mIi"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="bgj-xZ-c74"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="bgj-xZ-c74">
+                            <connections>
+                                <action selector="startAction:" destination="RFI-aj-Wc3" id="sCs-6H-Uoo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mainList" destination="f8w-RK-s7l" id="k3O-0u-k9r"/>
@@ -469,6 +476,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4z-x8-oYU">
                                                             <rect key="frame" x="2" y="2" width="69" height="31"/>
                                                             <state key="normal" title="Добавить"/>
+                                                            <connections>
+                                                                <action selector="addAction:" destination="kEh-C3-XwW" eventType="touchUpInside" id="MI7-vO-L7h"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -684,6 +694,28 @@
             </objects>
             <point key="canvasLocation" x="1927.5362318840582" y="851.78571428571422"/>
         </scene>
+        <!--Тренировка-->
+        <scene sceneID="rAL-Bu-Qkl">
+            <objects>
+                <viewController id="RHb-j1-KEr" customClass="ActionController" customModule="YogaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wcl-27-ndL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="gNO-Rw-PrQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Тренировка" id="qng-7Z-CuM">
+                        <barButtonItem key="leftBarButtonItem" title="Выход" id="Eph-Ng-Udw">
+                            <connections>
+                                <action selector="exit:" destination="RHb-j1-KEr" id="2Wy-8e-9kO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tsO-ea-tst" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2838" y="1606"/>
+        </scene>
         <!--Профиль-->
         <scene sceneID="IcQ-lo-7Es">
             <objects>
@@ -807,7 +839,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uqy-QE-XLL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-826" y="90"/>
+            <point key="canvasLocation" x="-826" y="150"/>
         </scene>
         <!--Профиль-->
         <scene sceneID="xox-X0-sVm">
@@ -828,9 +860,28 @@
             </objects>
             <point key="canvasLocation" x="132" y="1606"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ibw-Yp-ie3">
+            <objects>
+                <navigationController storyboardIdentifier="startAction" automaticallyAdjustsScrollViewInsets="NO" id="g4M-pw-b2B" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="DEh-eP-oML"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rkN-jy-zBN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RHb-j1-KEr" kind="relationship" relationship="rootViewController" id="Ch9-iT-3d5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dUZ-7h-h8U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928" y="1606"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uhH-nk-oQs"/>
+        <segue reference="lHS-p0-vdt"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>

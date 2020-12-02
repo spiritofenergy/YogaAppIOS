@@ -90,6 +90,22 @@ class CardViewController: UITableViewCell {
         }
     }
     
+    @IBAction func addAction(_ sender: Any) {
+//        if card.opens != nil {
+//            ModelFireBaseDB.objectDB.actions.append(contentsOf: card.opens)
+//        }
+        if (ModelFireBaseDB.objectDB.actions.contains { $0.id == card.id }) {
+            ModelFireBaseDB.objectDB.actions.removeAll { $0.id == card.id }
+        } else {
+            ModelFireBaseDB.objectDB.actions.append(card)
+        }
+        
+        NotificationCenter.default.post(name: NSNotification.Name("actionsRefresh"), object: self)
+        
+        print(ModelFireBaseDB.objectDB.actions)
+    }
+    
+    
     /*
     
     MARK: MY FUNCTIONS

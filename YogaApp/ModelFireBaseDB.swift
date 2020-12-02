@@ -19,7 +19,7 @@ class Card {
     var isCheck: Bool = false
     var likes: Int = 0
     var comments: Int = 0
-    var opens: [String.SubSequence]?
+    var opens: [Card]?
 }
 
 class ModelFireBaseDB: NSObject {
@@ -30,6 +30,7 @@ class ModelFireBaseDB: NSObject {
     
     var cards: [Card] = []
     var favorite: [Card] = []
+    var actions: [Card] = []
     
     func getCards() {
         cards = []
@@ -55,7 +56,7 @@ class ModelFireBaseDB: NSObject {
                     newCard.thumbPath = photos
                     
                     let opens = (document["openAsans"] as? String)?.split(separator: " ")
-                    newCard.opens = opens
+//                    newCard.opens = opens
                     
                     self.cards.append(newCard)
                 }
@@ -92,4 +93,5 @@ class ModelFireBaseDB: NSObject {
             }
         }
     }
+    
 }

@@ -21,6 +21,8 @@ class FavoriteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ModelFireBaseDB.objectDB.actions = []
+        
         mainList.dataSource = self
         mainList.delegate = self
         

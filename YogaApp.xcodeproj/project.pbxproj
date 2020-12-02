@@ -13,6 +13,7 @@
 		EA9212E5256E3004003D084E /* ImageOfSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9212E4256E3004003D084E /* ImageOfSlider.swift */; };
 		EA939463257799B500EB6EDF /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA939462257799B500EB6EDF /* Functions.swift */; };
 		EA93946525779FB600EB6EDF /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93946425779FB600EB6EDF /* FavoriteViewController.swift */; };
+		EA9394672577BEB000EB6EDF /* ActionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9394662577BEB000EB6EDF /* ActionController.swift */; };
 		EA94B04A256D960400DFDD0E /* AsanaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94B049256D960400DFDD0E /* AsanaController.swift */; };
 		EA975DF5256AD4CC0094C4B6 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA975DF4256AD4CC0094C4B6 /* CardViewController.swift */; };
 		EA975DF9256AD78A0094C4B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA975DF8256AD78A0094C4B6 /* GoogleService-Info.plist */; };
@@ -36,6 +37,7 @@
 		EA9212E4256E3004003D084E /* ImageOfSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOfSlider.swift; sourceTree = "<group>"; };
 		EA939462257799B500EB6EDF /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		EA93946425779FB600EB6EDF /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		EA9394662577BEB000EB6EDF /* ActionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionController.swift; sourceTree = "<group>"; };
 		EA94B049256D960400DFDD0E /* AsanaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsanaController.swift; sourceTree = "<group>"; };
 		EA975DF4256AD4CC0094C4B6 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		EA975DF8256AD78A0094C4B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				EA975DF4256AD4CC0094C4B6 /* CardViewController.swift */,
 				EA9212E4256E3004003D084E /* ImageOfSlider.swift */,
 				EA94B049256D960400DFDD0E /* AsanaController.swift */,
+				EA9394662577BEB000EB6EDF /* ActionController.swift */,
 				EABAABFC256D0E8E00F69698 /* Main.storyboard */,
 				EAF909FB2562A005006E6C55 /* Assets.xcassets */,
 				EAF909FD2562A005006E6C55 /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 				EA94B04A256D960400DFDD0E /* AsanaController.swift in Sources */,
 				EA9212E5256E3004003D084E /* ImageOfSlider.swift in Sources */,
 				EABAABF6256CE11000F69698 /* ProfileController.swift in Sources */,
+				EA9394672577BEB000EB6EDF /* ActionController.swift in Sources */,
 				EA90E2A1256BC06700C473B8 /* ModelFireBaseDB.swift in Sources */,
 				EA939463257799B500EB6EDF /* Functions.swift in Sources */,
 				EA62081E2574E55500B46D35 /* ProtocolClickCollectionCell.swift in Sources */,
