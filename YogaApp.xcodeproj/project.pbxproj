@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA62081E2574E55500B46D35 /* ProtocolClickCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA62081D2574E55500B46D35 /* ProtocolClickCollectionCell.swift */; };
 		EA90E29F256BB34300C473B8 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA90E29E256BB34300C473B8 /* AuthController.swift */; };
 		EA90E2A1256BC06700C473B8 /* ModelFireBaseDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA90E2A0256BC06700C473B8 /* ModelFireBaseDB.swift */; };
 		EA9212E5256E3004003D084E /* ImageOfSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9212E4256E3004003D084E /* ImageOfSlider.swift */; };
@@ -27,6 +28,7 @@
 		4F652CD393A85892FC1F7169 /* Pods-YogaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YogaApp.debug.xcconfig"; path = "Target Support Files/Pods-YogaApp/Pods-YogaApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5C29C06F19832AD42C474A2F /* Pods_YogaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YogaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CCC199813E8618DA27FCEB4 /* Pods-YogaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YogaApp.release.xcconfig"; path = "Target Support Files/Pods-YogaApp/Pods-YogaApp.release.xcconfig"; sourceTree = "<group>"; };
+		EA62081D2574E55500B46D35 /* ProtocolClickCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolClickCollectionCell.swift; sourceTree = "<group>"; };
 		EA90E29E256BB34300C473B8 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		EA90E2A0256BC06700C473B8 /* ModelFireBaseDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFireBaseDB.swift; sourceTree = "<group>"; };
 		EA9212E4256E3004003D084E /* ImageOfSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOfSlider.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				EAF909FD2562A005006E6C55 /* LaunchScreen.storyboard */,
 				EAF90A002562A005006E6C55 /* Info.plist */,
 				EA975DF8256AD78A0094C4B6 /* GoogleService-Info.plist */,
+				EA62081D2574E55500B46D35 /* ProtocolClickCollectionCell.swift */,
 			);
 			path = YogaApp;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				EA9212E5256E3004003D084E /* ImageOfSlider.swift in Sources */,
 				EABAABF6256CE11000F69698 /* ProfileController.swift in Sources */,
 				EA90E2A1256BC06700C473B8 /* ModelFireBaseDB.swift in Sources */,
+				EA62081E2574E55500B46D35 /* ProtocolClickCollectionCell.swift in Sources */,
 				EA975DF5256AD4CC0094C4B6 /* CardViewController.swift in Sources */,
 				EA90E29F256BB34300C473B8 /* AuthController.swift in Sources */,
 				EAF909F72562A003006E6C55 /* ViewController.swift in Sources */,

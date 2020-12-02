@@ -29,6 +29,11 @@ class ViewController: UIViewController {
             
             (segue.destination as! AsanaController).card = selectedCard
         }
+        if segue.identifier == "showCardSlider" {
+            let selectedCard = ModelFireBaseDB.objectDB.cards[(sender as! Int)]
+            
+            (segue.destination as! AsanaController).card = selectedCard
+        }
     }
 }
 
@@ -49,6 +54,15 @@ extension ViewController : UITableViewDataSource {
         let currentCard = ModelFireBaseDB.objectDB.cards[indexPath.row]
         cell.initCell(currentCard: currentCard)
         
+        cell.delegateSlider = self
+        cell.row = indexPath.row
+        
         return cell
+    }
+}
+
+extension ViewController : ImageSliderDelegate {
+    func callSegueFromCell(myData dataobject: AnyObject) {
+        performSegue(withIdentifier: "showCardSlider", sender: dataobject)
     }
 }
