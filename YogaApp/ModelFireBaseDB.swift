@@ -19,6 +19,7 @@ class Card {
     var isCheck: Bool = false
     var likes: Int = 0
     var comments: Int = 0
+    var opens: [String.SubSequence]?
 }
 
 class ModelFireBaseDB: NSObject {
@@ -28,6 +29,7 @@ class ModelFireBaseDB: NSObject {
     var userID: String?
     
     var cards: [Card] = []
+    var favorite: [Card] = []
     
     func getCards() {
         cards = []
@@ -47,13 +49,13 @@ class ModelFireBaseDB: NSObject {
                     newCard.shortDescription = (document["shortDescription"] as! String)
                     newCard.description = (document["description"] as! String)
                     newCard.likes = (document["likes"] as! Int)
-                    
-                    
-                    
                     newCard.comments = (document["comments"] as! Int)
-                    let photos = (document["thumbPath"] as! String).split(separator: " ")
                     
+                    let photos = (document["thumbPath"] as! String).split(separator: " ")
                     newCard.thumbPath = photos
+                    
+                    let opens = (document["openAsans"] as? String)?.split(separator: " ")
+                    newCard.opens = opens
                     
                     self.cards.append(newCard)
                 }
@@ -62,9 +64,13 @@ class ModelFireBaseDB: NSObject {
                     if let error = error {
                         print(error.localizedDescription)
                     } else {
-                        for (index, document) in documentLike!.documents.enumerated() {
+                        for document in documentLike!.documents {
                             if document[self.userID!] != nil {
-                                self.cards[index].isCheck = document[self.userID!] as! Bool
+                                for (index, card) in self.cards.enumerated() {
+                                    if card.id == document.documentID {
+                                        self.cards[index].isCheck = document[self.userID!] as! Bool
+                                    }
+                                }
                             }
                         }
                         
@@ -73,6 +79,16 @@ class ModelFireBaseDB: NSObject {
                 }
                 
                 
+            }
+        }
+    }
+    
+    func getFavoriteCard() {
+        favorite = []
+        
+        for card in cards {
+            if card.isCheck {
+                favorite.append(card)
             }
         }
     }

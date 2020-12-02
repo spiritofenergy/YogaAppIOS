@@ -31,6 +31,7 @@ class CardViewController: UITableViewCell {
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var countComments: UILabel!
     @IBOutlet weak var imageSlider: UICollectionView!
+    @IBOutlet var addToAction: UIButton!
     
     var card: Card = Card()
     
@@ -168,35 +169,5 @@ extension CardViewController : UICollectionViewDataSource {
 extension CardViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.delegateSlider.callSegueFromCell(myData: row as AnyObject)
-    }
-}
-
-
-func getImage(url: String.SubSequence, comletion: @escaping (UIImage?) -> ()) {
-    let storage = Storage.storage().reference()
-    
-    let filePath = "\(url).jpeg"
-    let fileURL = NSURL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!).appendingPathComponent(filePath)
-    
-    let storageRef = storage.child("thumbnails/\(url).jpeg")
-    
-    if let imageData = NSData(contentsOf: fileURL!) {
-        let image = UIImage(data: imageData as Data)
-        
-        comletion(image)
-    } else {
-        storageRef.write(toFile: fileURL!) { url, error in
-            if let error = error {
-                print(error.localizedDescription)
-            } else {
-                if let imageData = NSData(contentsOf: fileURL!) {
-                    let image = UIImage(data: imageData as Data)
-                    
-                    comletion(image)
-                } else {
-                    comletion(nil)
-                }
-            }
-        }
     }
 }
