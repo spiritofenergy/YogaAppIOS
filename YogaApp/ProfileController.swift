@@ -11,10 +11,14 @@ import Firebase
 
 class ProfileController: UIViewController {
     
+    let settings = UserDefaults.standard
+    
     @IBOutlet weak var nameUser: UILabel!
     @IBOutlet weak var imageProfile: UIImageView!
     @IBOutlet weak var contactUser: UILabel!
     @IBOutlet weak var statusUser: UILabel!
+    @IBOutlet weak var settingTime: UISegmentedControl!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +30,17 @@ class ProfileController: UIViewController {
             imageProfile.load(url: user.photoURL)
             imageProfile.layer.cornerRadius = imageProfile.frame.height / 2
         }
-
+        
+        switch settings.integer(forKey: "timeForAsana") {
+            case 30:
+                settingTime.selectedSegmentIndex = 0
+            case 60:
+                settingTime.selectedSegmentIndex = 1
+            case 90:
+                settingTime.selectedSegmentIndex = 2
+            default:
+                settingTime.selectedSegmentIndex = 0
+        }
         
     }
     
@@ -42,6 +56,20 @@ class ProfileController: UIViewController {
             
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
+        }
+    }
+    
+    @IBAction func changeTime(_ sender: Any) {
+        switch settingTime.selectedSegmentIndex
+        {
+        case 0:
+            settings.set(30, forKey: "timeForAsana")
+        case 1:
+            settings.set(60, forKey: "timeForAsana")
+        case 2:
+            settings.set(90, forKey: "timeForAsana")
+        default:
+            settings.set(30, forKey: "timeForAsana")
         }
     }
     

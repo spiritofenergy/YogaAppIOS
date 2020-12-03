@@ -15,5 +15,6 @@ target 'YogaApp' do
   pod 'GoogleSignIn'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
+  pod 'MBCircularProgressBar'
 
 end

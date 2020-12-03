@@ -19,7 +19,7 @@ class Card {
     var isCheck: Bool = false
     var likes: Int = 0
     var comments: Int = 0
-    var opens: [Card]?
+    var opens: [String.SubSequence]?
 }
 
 class ModelFireBaseDB: NSObject {
@@ -29,10 +29,12 @@ class ModelFireBaseDB: NSObject {
     var userID: String?
     
     var cards: [Card] = []
+    var opensCards: [String: Card] = [:]
     var favorite: [Card] = []
     var actions: [Card] = []
     
     func getCards() {
+        getOpensCard()
         cards = []
         
         if Auth.auth().currentUser != nil {
@@ -56,7 +58,7 @@ class ModelFireBaseDB: NSObject {
                     newCard.thumbPath = photos
                     
                     let opens = (document["openAsans"] as? String)?.split(separator: " ")
-//                    newCard.opens = opens
+                    newCard.opens = opens
                     
                     self.cards.append(newCard)
                 }
@@ -82,6 +84,30 @@ class ModelFireBaseDB: NSObject {
                 
             }
         }
+    }
+    
+    func getOpensCard() {
+        opensCards = [:]
+        
+        db.collection("openAsunaRU").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    let newCard: Card = Card()
+                    newCard.id = document.documentID
+                    newCard.title = (document["title"] as! String)
+                    newCard.description = (document["description"] as! String)
+                    
+                    let photos = (document["thumbPath"] as! String).split(separator: " ")
+                    newCard.thumbPath = photos
+                    
+                    self.opensCards[newCard.id!] = newCard
+                }
+                
+            }
+        }
+        
     }
     
     func getFavoriteCard() {

@@ -32,6 +32,7 @@ class CardViewController: UITableViewCell {
     @IBOutlet weak var countComments: UILabel!
     @IBOutlet weak var imageSlider: UICollectionView!
     @IBOutlet var addToAction: UIButton!
+    @IBOutlet weak var opensImages: UICollectionView!
     
     var card: Card = Card()
     
@@ -91,18 +92,28 @@ class CardViewController: UITableViewCell {
     }
     
     @IBAction func addAction(_ sender: Any) {
-//        if card.opens != nil {
-//            ModelFireBaseDB.objectDB.actions.append(contentsOf: card.opens)
-//        }
         if (ModelFireBaseDB.objectDB.actions.contains { $0.id == card.id }) {
+            if card.opens != nil {
+                for id in card.opens! {
+                    if let cardOpen = ModelFireBaseDB.objectDB.opensCards[String(id)] {
+                        ModelFireBaseDB.objectDB.actions.removeAll { $0.id == cardOpen.id }
+                    }
+                }
+            }
             ModelFireBaseDB.objectDB.actions.removeAll { $0.id == card.id }
         } else {
+            if card.opens != nil {
+                for id in card.opens! {
+                    if let cardOpen = ModelFireBaseDB.objectDB.opensCards[String(id)] {
+                        ModelFireBaseDB.objectDB.actions.append(cardOpen)
+                    }
+                }
+            }
             ModelFireBaseDB.objectDB.actions.append(card)
         }
         
         NotificationCenter.default.post(name: NSNotification.Name("actionsRefresh"), object: self)
         
-        print(ModelFireBaseDB.objectDB.actions)
     }
     
     
@@ -146,7 +157,10 @@ class CardViewController: UITableViewCell {
         imageSlider.dataSource = self
         imageSlider.delegate = self
         
+        opensImages.dataSource = self
+        
         imageSlider.reloadData()
+        opensImages.reloadData()
     }
     
     func updateUI() {
@@ -170,15 +184,35 @@ MARK: EXTENSIONS
 */
 extension CardViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return card.thumbPath!.count
+        if collectionView.tag == 1 {
+            return card.thumbPath!.count
+        }
+        if collectionView.tag == 2 {
+            return card.opens?.count ?? 0
+        }
+        return 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = imageSlider.dequeueReusableCell(withReuseIdentifier: "itemOfImagesSlider", for: indexPath) as! ImageOfSlider
+        if collectionView.tag == 1 {
+            let cell = imageSlider.dequeueReusableCell(withReuseIdentifier: "itemOfImagesSlider", for: indexPath) as! ImageOfSlider
+            
+            cell.initCell(path: card.thumbPath![indexPath.row])
         
-        cell.initCell(path: card.thumbPath![indexPath.row])
+            return cell
+        }
         
-        return cell
+        if collectionView.tag == 2 {
+            let cell = opensImages.dequeueReusableCell(withReuseIdentifier: "cellOpens", for: indexPath) as! OpenImageInCard
+            
+            let cardOpen = ModelFireBaseDB.objectDB.opensCards[String(card.opens![indexPath.row])]
+            
+            cell.initCell(path: cardOpen!.thumbPath![0])
+        
+            return cell
+        }
+        
+        return UICollectionViewCell()
     }
 }
 
