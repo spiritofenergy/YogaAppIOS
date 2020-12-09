@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="goj-Wm-5YZ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Добавление-->
+        <scene sceneID="2xT-cT-Nod">
+            <objects>
+                <viewController id="sEO-qI-biz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3uW-HF-4oZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="9AZ-OZ-5f5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Добавление" id="A6i-l5-e1W"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pZh-Rf-mfp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="1605.8035714285713"/>
+        </scene>
+        <!--Добавление-->
+        <scene sceneID="Ezd-LL-sa7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="goj-Wm-5YZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Добавление" image="plus" catalog="system" id="glu-32-MzP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HOe-rH-gVi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sEO-qI-biz" kind="relationship" relationship="rootViewController" id="WFn-iY-UYk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VSn-7L-gM1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="1605.8035714285713"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

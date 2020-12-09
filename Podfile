@@ -16,5 +16,6 @@ target 'YogaApp' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
   pod 'MBCircularProgressBar'
+  pod 'Google-Mobile-Ads-SDK'
 
 end

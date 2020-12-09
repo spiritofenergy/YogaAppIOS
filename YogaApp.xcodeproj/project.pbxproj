@@ -7,16 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA18DF1625815EF2006A52FF /* AddView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA18DF1525815EF2006A52FF /* AddView.storyboard */; };
+		EA18DF18258160F8006A52FF /* AuthView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA18DF17258160F7006A52FF /* AuthView.storyboard */; };
+		EA18DF1A25816155006A52FF /* ProfileView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA18DF1925816155006A52FF /* ProfileView.storyboard */; };
+		EA18DF2025816564006A52FF /* MainListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA18DF1F25816564006A52FF /* MainListView.storyboard */; };
+		EA18DF22258165A5006A52FF /* ActionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA18DF21258165A5006A52FF /* ActionView.storyboard */; };
+		EA18DF2525816E66006A52FF /* CongratulationsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA18DF2425816E66006A52FF /* CongratulationsView.storyboard */; };
+		EA18DF2725816FAA006A52FF /* FavoriteView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA18DF2625816FAA006A52FF /* FavoriteView.storyboard */; };
+		EA18DF2925816FE3006A52FF /* AsanaView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA18DF2825816FE3006A52FF /* AsanaView.storyboard */; };
+		EA18DF2C2581745E006A52FF /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18DF2B2581745E006A52FF /* Theme.swift */; };
+		EA18DF2E258174EF006A52FF /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18DF2D258174EF006A52FF /* ThemeProtocol.swift */; };
+		EA18DF302581750E006A52FF /* DefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18DF2F2581750E006A52FF /* DefaultTheme.swift */; };
+		EA18DF3225817996006A52FF /* RedTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18DF3125817996006A52FF /* RedTheme.swift */; };
 		EA56E8AF25799090005C2D3C /* OpenImageInCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA56E8AE2579908F005C2D3C /* OpenImageInCard.swift */; };
 		EA62081E2574E55500B46D35 /* ProtocolClickCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA62081D2574E55500B46D35 /* ProtocolClickCollectionCell.swift */; };
+		EA8DDCBE257EBDA600C3A38C /* MainListTableAdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8DDCBD257EBDA600C3A38C /* MainListTableAdCell.swift */; };
+		EA8DDCC0257EC9B100C3A38C /* ModelAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8DDCBF257EC9B100C3A38C /* ModelAdController.swift */; };
+		EA8DDCEF257EF11800C3A38C /* GADTMediumTemplateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8DDCE4257EF11800C3A38C /* GADTMediumTemplateView.xib */; };
+		EA8DDCF0257EF11800C3A38C /* GADTSmallTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8DDCE7257EF11800C3A38C /* GADTSmallTemplateView.m */; };
+		EA8DDCF1257EF11800C3A38C /* GADTSmallTemplateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8DDCE8257EF11800C3A38C /* GADTSmallTemplateView.xib */; };
+		EA8DDCF2257EF11800C3A38C /* GADTTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8DDCE9257EF11800C3A38C /* GADTTemplateView.m */; };
+		EA8DDCF3257EF11800C3A38C /* GADTMediumTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8DDCEA257EF11800C3A38C /* GADTMediumTemplateView.m */; };
 		EA90E29F256BB34300C473B8 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA90E29E256BB34300C473B8 /* AuthController.swift */; };
 		EA90E2A1256BC06700C473B8 /* ModelFireBaseDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA90E2A0256BC06700C473B8 /* ModelFireBaseDB.swift */; };
 		EA9212E5256E3004003D084E /* ImageOfSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9212E4256E3004003D084E /* ImageOfSlider.swift */; };
-		EA939463257799B500EB6EDF /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA939462257799B500EB6EDF /* Functions.swift */; };
 		EA93946525779FB600EB6EDF /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93946425779FB600EB6EDF /* FavoriteViewController.swift */; };
 		EA9394672577BEB000EB6EDF /* ActionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9394662577BEB000EB6EDF /* ActionController.swift */; };
 		EA94B04A256D960400DFDD0E /* AsanaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94B049256D960400DFDD0E /* AsanaController.swift */; };
-		EA975DF5256AD4CC0094C4B6 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA975DF4256AD4CC0094C4B6 /* CardViewController.swift */; };
+		EA95FC6B258154760045AC33 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA95FC6A258154760045AC33 /* Colors.xcassets */; };
+		EA95FC6E258155DF0045AC33 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA95FC6D258155DF0045AC33 /* UIImageViewExtension.swift */; };
+		EA975DF5256AD4CC0094C4B6 /* MainListTableCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA975DF4256AD4CC0094C4B6 /* MainListTableCardCell.swift */; };
 		EA975DF9256AD78A0094C4B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA975DF8256AD78A0094C4B6 /* GoogleService-Info.plist */; };
 		EABAABF6256CE11000F69698 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABAABF5256CE11000F69698 /* ProfileController.swift */; };
 		EABAABFD256D0E8E00F69698 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EABAABFC256D0E8E00F69698 /* Main.storyboard */; };
@@ -32,16 +52,40 @@
 		4F652CD393A85892FC1F7169 /* Pods-YogaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YogaApp.debug.xcconfig"; path = "Target Support Files/Pods-YogaApp/Pods-YogaApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5C29C06F19832AD42C474A2F /* Pods_YogaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YogaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CCC199813E8618DA27FCEB4 /* Pods-YogaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YogaApp.release.xcconfig"; path = "Target Support Files/Pods-YogaApp/Pods-YogaApp.release.xcconfig"; sourceTree = "<group>"; };
+		EA18DF1525815EF2006A52FF /* AddView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddView.storyboard; sourceTree = "<group>"; };
+		EA18DF17258160F7006A52FF /* AuthView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AuthView.storyboard; sourceTree = "<group>"; };
+		EA18DF1925816155006A52FF /* ProfileView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileView.storyboard; sourceTree = "<group>"; };
+		EA18DF1F25816564006A52FF /* MainListView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainListView.storyboard; sourceTree = "<group>"; };
+		EA18DF21258165A5006A52FF /* ActionView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActionView.storyboard; sourceTree = "<group>"; };
+		EA18DF2425816E66006A52FF /* CongratulationsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CongratulationsView.storyboard; sourceTree = "<group>"; };
+		EA18DF2625816FAA006A52FF /* FavoriteView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FavoriteView.storyboard; sourceTree = "<group>"; };
+		EA18DF2825816FE3006A52FF /* AsanaView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AsanaView.storyboard; sourceTree = "<group>"; };
+		EA18DF2B2581745E006A52FF /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		EA18DF2D258174EF006A52FF /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
+		EA18DF2F2581750E006A52FF /* DefaultTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTheme.swift; sourceTree = "<group>"; };
+		EA18DF3125817996006A52FF /* RedTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedTheme.swift; sourceTree = "<group>"; };
 		EA56E8AE2579908F005C2D3C /* OpenImageInCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenImageInCard.swift; sourceTree = "<group>"; };
 		EA62081D2574E55500B46D35 /* ProtocolClickCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolClickCollectionCell.swift; sourceTree = "<group>"; };
+		EA8DDCBD257EBDA600C3A38C /* MainListTableAdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListTableAdCell.swift; sourceTree = "<group>"; };
+		EA8DDCBF257EC9B100C3A38C /* ModelAdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAdController.swift; sourceTree = "<group>"; };
+		EA8DDCE4257EF11800C3A38C /* GADTMediumTemplateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GADTMediumTemplateView.xib; sourceTree = "<group>"; };
+		EA8DDCE5257EF11800C3A38C /* GADTTemplateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADTTemplateView.h; sourceTree = "<group>"; };
+		EA8DDCE6257EF11800C3A38C /* GADTMediumTemplateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADTMediumTemplateView.h; sourceTree = "<group>"; };
+		EA8DDCE7257EF11800C3A38C /* GADTSmallTemplateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADTSmallTemplateView.m; sourceTree = "<group>"; };
+		EA8DDCE8257EF11800C3A38C /* GADTSmallTemplateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GADTSmallTemplateView.xib; sourceTree = "<group>"; };
+		EA8DDCE9257EF11800C3A38C /* GADTTemplateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADTTemplateView.m; sourceTree = "<group>"; };
+		EA8DDCEA257EF11800C3A38C /* GADTMediumTemplateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADTMediumTemplateView.m; sourceTree = "<group>"; };
+		EA8DDCEB257EF11800C3A38C /* GADTSmallTemplateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADTSmallTemplateView.h; sourceTree = "<group>"; };
+		EA8DDCF4257EF34F00C3A38C /* YogaApp_BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YogaApp_BridgingHeader.h; sourceTree = "<group>"; };
 		EA90E29E256BB34300C473B8 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		EA90E2A0256BC06700C473B8 /* ModelFireBaseDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFireBaseDB.swift; sourceTree = "<group>"; };
 		EA9212E4256E3004003D084E /* ImageOfSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOfSlider.swift; sourceTree = "<group>"; };
-		EA939462257799B500EB6EDF /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		EA93946425779FB600EB6EDF /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		EA9394662577BEB000EB6EDF /* ActionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionController.swift; sourceTree = "<group>"; };
 		EA94B049256D960400DFDD0E /* AsanaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsanaController.swift; sourceTree = "<group>"; };
-		EA975DF4256AD4CC0094C4B6 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		EA95FC6A258154760045AC33 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		EA95FC6D258155DF0045AC33 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		EA975DF4256AD4CC0094C4B6 /* MainListTableCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListTableCardCell.swift; sourceTree = "<group>"; };
 		EA975DF8256AD78A0094C4B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EABAABF5256CE11000F69698 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		EABAABFC256D0E8E00F69698 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +119,157 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EA18DF1B258161AC006A52FF /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				EA18DF1525815EF2006A52FF /* AddView.storyboard */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		EA18DF1C258161C8006A52FF /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				EA18DF1925816155006A52FF /* ProfileView.storyboard */,
+				EABAABF5256CE11000F69698 /* ProfileController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		EA18DF1D258162ED006A52FF /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				EA18DF3525817A0A006A52FF /* Congratulation */,
+				EA18DF21258165A5006A52FF /* ActionView.storyboard */,
+				EA9394662577BEB000EB6EDF /* ActionController.swift */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		EA18DF1E258162F4006A52FF /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				EA18DF17258160F7006A52FF /* AuthView.storyboard */,
+				EA90E29E256BB34300C473B8 /* AuthController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		EA18DF2325816DBC006A52FF /* MainList */ = {
+			isa = PBXGroup;
+			children = (
+				EA18DF34258179E4006A52FF /* Asana */,
+				EA18DF33258179D8006A52FF /* Favorite */,
+				EA18DF1F25816564006A52FF /* MainListView.storyboard */,
+				EAF909F62562A003006E6C55 /* ViewController.swift */,
+				EA975DF4256AD4CC0094C4B6 /* MainListTableCardCell.swift */,
+				EA8DDCBD257EBDA600C3A38C /* MainListTableAdCell.swift */,
+				EA9212E4256E3004003D084E /* ImageOfSlider.swift */,
+				EA56E8AE2579908F005C2D3C /* OpenImageInCard.swift */,
+				EA62081D2574E55500B46D35 /* ProtocolClickCollectionCell.swift */,
+			);
+			path = MainList;
+			sourceTree = "<group>";
+		};
+		EA18DF2A2581743A006A52FF /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				EA18DF2B2581745E006A52FF /* Theme.swift */,
+				EA18DF2D258174EF006A52FF /* ThemeProtocol.swift */,
+				EA18DF2F2581750E006A52FF /* DefaultTheme.swift */,
+				EA18DF3125817996006A52FF /* RedTheme.swift */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		EA18DF33258179D8006A52FF /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				EA18DF2625816FAA006A52FF /* FavoriteView.storyboard */,
+				EA93946425779FB600EB6EDF /* FavoriteViewController.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		EA18DF34258179E4006A52FF /* Asana */ = {
+			isa = PBXGroup;
+			children = (
+				EA18DF2825816FE3006A52FF /* AsanaView.storyboard */,
+				EA94B049256D960400DFDD0E /* AsanaController.swift */,
+			);
+			path = Asana;
+			sourceTree = "<group>";
+		};
+		EA18DF3525817A0A006A52FF /* Congratulation */ = {
+			isa = PBXGroup;
+			children = (
+				EA18DF2425816E66006A52FF /* CongratulationsView.storyboard */,
+			);
+			path = Congratulation;
+			sourceTree = "<group>";
+		};
+		EA8DDCE3257EF11800C3A38C /* nativetemplates */ = {
+			isa = PBXGroup;
+			children = (
+				EA8DDCE5257EF11800C3A38C /* GADTTemplateView.h */,
+				EA8DDCE6257EF11800C3A38C /* GADTMediumTemplateView.h */,
+				EA8DDCE7257EF11800C3A38C /* GADTSmallTemplateView.m */,
+				EA8DDCE8257EF11800C3A38C /* GADTSmallTemplateView.xib */,
+				EA8DDCE4257EF11800C3A38C /* GADTMediumTemplateView.xib */,
+				EA8DDCE9257EF11800C3A38C /* GADTTemplateView.m */,
+				EA8DDCEA257EF11800C3A38C /* GADTMediumTemplateView.m */,
+				EA8DDCEB257EF11800C3A38C /* GADTSmallTemplateView.h */,
+			);
+			path = nativetemplates;
+			sourceTree = "<group>";
+		};
+		EA95FC66258153E00045AC33 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA18DF2A2581743A006A52FF /* Themes */,
+				EA95FC6A258154760045AC33 /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EA95FC67258153F50045AC33 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA95FC6D258155DF0045AC33 /* UIImageViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EA95FC68258154080045AC33 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA90E2A0256BC06700C473B8 /* ModelFireBaseDB.swift */,
+				EA8DDCBF257EC9B100C3A38C /* ModelAdController.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EA95FC692581540F0045AC33 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EABAABFC256D0E8E00F69698 /* Main.storyboard */,
+				EA18DF1E258162F4006A52FF /* Auth */,
+				EA18DF2325816DBC006A52FF /* MainList */,
+				EA18DF1D258162ED006A52FF /* Action */,
+				EA18DF1C258161C8006A52FF /* Setting */,
+				EA18DF1B258161AC006A52FF /* Add */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EA95FC6C2581555A0045AC33 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				EA8DDCE3257EF11800C3A38C /* nativetemplates */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
 		EAF909E62562A003006E6C55 = {
 			isa = PBXGroup;
 			children = (
@@ -96,25 +291,18 @@
 		EAF909F12562A003006E6C55 /* YogaApp */ = {
 			isa = PBXGroup;
 			children = (
+				EA95FC6C2581555A0045AC33 /* Templates */,
+				EA95FC692581540F0045AC33 /* Views */,
+				EA95FC68258154080045AC33 /* Models */,
+				EA95FC67258153F50045AC33 /* Extensions */,
+				EA95FC66258153E00045AC33 /* Resources */,
 				EAF909F22562A003006E6C55 /* AppDelegate.swift */,
 				EAF909F42562A003006E6C55 /* SceneDelegate.swift */,
-				EA90E2A0256BC06700C473B8 /* ModelFireBaseDB.swift */,
-				EA90E29E256BB34300C473B8 /* AuthController.swift */,
-				EABAABF5256CE11000F69698 /* ProfileController.swift */,
-				EAF909F62562A003006E6C55 /* ViewController.swift */,
-				EA93946425779FB600EB6EDF /* FavoriteViewController.swift */,
-				EA975DF4256AD4CC0094C4B6 /* CardViewController.swift */,
-				EA94B049256D960400DFDD0E /* AsanaController.swift */,
-				EA9394662577BEB000EB6EDF /* ActionController.swift */,
-				EA9212E4256E3004003D084E /* ImageOfSlider.swift */,
-				EA56E8AE2579908F005C2D3C /* OpenImageInCard.swift */,
-				EABAABFC256D0E8E00F69698 /* Main.storyboard */,
 				EAF909FB2562A005006E6C55 /* Assets.xcassets */,
 				EAF909FD2562A005006E6C55 /* LaunchScreen.storyboard */,
 				EAF90A002562A005006E6C55 /* Info.plist */,
 				EA975DF8256AD78A0094C4B6 /* GoogleService-Info.plist */,
-				EA62081D2574E55500B46D35 /* ProtocolClickCollectionCell.swift */,
-				EA939462257799B500EB6EDF /* Functions.swift */,
+				EA8DDCF4257EF34F00C3A38C /* YogaApp_BridgingHeader.h */,
 			);
 			path = YogaApp;
 			sourceTree = "<group>";
@@ -156,6 +344,9 @@
 		EAF909E72562A003006E6C55 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					ad,
+				);
 				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Nill Simon";
@@ -188,10 +379,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA18DF1A25816155006A52FF /* ProfileView.storyboard in Resources */,
+				EA18DF2525816E66006A52FF /* CongratulationsView.storyboard in Resources */,
+				EA8DDCF1257EF11800C3A38C /* GADTSmallTemplateView.xib in Resources */,
 				EAF909FF2562A005006E6C55 /* LaunchScreen.storyboard in Resources */,
 				EA975DF9256AD78A0094C4B6 /* GoogleService-Info.plist in Resources */,
+				EA18DF2725816FAA006A52FF /* FavoriteView.storyboard in Resources */,
+				EA8DDCEF257EF11800C3A38C /* GADTMediumTemplateView.xib in Resources */,
+				EA18DF22258165A5006A52FF /* ActionView.storyboard in Resources */,
 				EAF909FC2562A005006E6C55 /* Assets.xcassets in Resources */,
+				EA18DF2025816564006A52FF /* MainListView.storyboard in Resources */,
+				EA18DF1625815EF2006A52FF /* AddView.storyboard in Resources */,
 				EABAABFD256D0E8E00F69698 /* Main.storyboard in Resources */,
+				EA18DF18258160F8006A52FF /* AuthView.storyboard in Resources */,
+				EA95FC6B258154760045AC33 /* Colors.xcassets in Resources */,
+				EA18DF2925816FE3006A52FF /* AsanaView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,18 +463,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA8DDCF3257EF11800C3A38C /* GADTMediumTemplateView.m in Sources */,
 				EA94B04A256D960400DFDD0E /* AsanaController.swift in Sources */,
+				EA8DDCC0257EC9B100C3A38C /* ModelAdController.swift in Sources */,
+				EA18DF302581750E006A52FF /* DefaultTheme.swift in Sources */,
+				EA18DF2E258174EF006A52FF /* ThemeProtocol.swift in Sources */,
 				EA9212E5256E3004003D084E /* ImageOfSlider.swift in Sources */,
 				EABAABF6256CE11000F69698 /* ProfileController.swift in Sources */,
+				EA8DDCF2257EF11800C3A38C /* GADTTemplateView.m in Sources */,
 				EA9394672577BEB000EB6EDF /* ActionController.swift in Sources */,
 				EA90E2A1256BC06700C473B8 /* ModelFireBaseDB.swift in Sources */,
-				EA939463257799B500EB6EDF /* Functions.swift in Sources */,
+				EA8DDCBE257EBDA600C3A38C /* MainListTableAdCell.swift in Sources */,
+				EA95FC6E258155DF0045AC33 /* UIImageViewExtension.swift in Sources */,
 				EA62081E2574E55500B46D35 /* ProtocolClickCollectionCell.swift in Sources */,
-				EA975DF5256AD4CC0094C4B6 /* CardViewController.swift in Sources */,
+				EA8DDCF0257EF11800C3A38C /* GADTSmallTemplateView.m in Sources */,
+				EA975DF5256AD4CC0094C4B6 /* MainListTableCardCell.swift in Sources */,
 				EA56E8AF25799090005C2D3C /* OpenImageInCard.swift in Sources */,
 				EA90E29F256BB34300C473B8 /* AuthController.swift in Sources */,
+				EA18DF3225817996006A52FF /* RedTheme.swift in Sources */,
 				EAF909F72562A003006E6C55 /* ViewController.swift in Sources */,
 				EAF909F32562A003006E6C55 /* AppDelegate.swift in Sources */,
+				EA18DF2C2581745E006A52FF /* Theme.swift in Sources */,
 				EA93946525779FB600EB6EDF /* FavoriteViewController.swift in Sources */,
 				EAF909F52562A003006E6C55 /* SceneDelegate.swift in Sources */,
 			);
@@ -348,6 +559,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SHAVA = asuna09;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -401,6 +613,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SHAVA = asuna09;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
@@ -421,6 +634,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gwtcoder.YogaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = YogaApp/YogaApp_BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -440,6 +654,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gwtcoder.YogaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = YogaApp/YogaApp_BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

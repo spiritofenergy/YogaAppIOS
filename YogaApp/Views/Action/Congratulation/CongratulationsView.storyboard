@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5xs-9T-lrw">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Rxe-7o-eJ2">
+            <objects>
+                <viewController id="5xs-9T-lrw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mDc-ER-kDk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Намастэ!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7d4-BE-ksQ">
+                                <rect key="frame" x="147.5" y="300" width="119" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Благодарим Вас за практику" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvi-JB-x3j">
+                                <rect key="frame" x="91.5" y="353.5" width="231" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vvi-JB-x3j" firstAttribute="top" secondItem="7d4-BE-ksQ" secondAttribute="bottom" constant="20" id="0nx-98-Dlo"/>
+                            <constraint firstItem="7d4-BE-ksQ" firstAttribute="centerX" secondItem="mDc-ER-kDk" secondAttribute="centerX" id="AkN-fw-Mhr"/>
+                            <constraint firstItem="7d4-BE-ksQ" firstAttribute="top" secondItem="vGK-Xu-hVZ" secondAttribute="top" constant="300" id="bNp-M5-2Y4"/>
+                            <constraint firstItem="vvi-JB-x3j" firstAttribute="centerX" secondItem="mDc-ER-kDk" secondAttribute="centerX" id="sK6-ja-ay6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vGK-Xu-hVZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GWu-IY-W17"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B8r-3C-HqA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3594" y="1606"/>
+        </scene>
+    </scenes>
+</document>
