@@ -26,9 +26,9 @@ class ActionController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if !AdController.ad.interstitial.isReady {
-            AdController.ad.getInterstitialAd(delegate: self)
-        }
+        updateUI()
+        
+        AdController.ad.getInterstitialAd(delegate: self)
         
         if (settings.object(forKey: "timeForAsana") != nil) {
             maxSec = settings.integer(forKey: "timeForAsana")
@@ -50,7 +50,13 @@ class ActionController: UIViewController {
         progressBar.value = CGFloat(maxSec)
         sec = maxSec
         
+        progressBar.fontColor = Theme.current.textColor
+        
         changeCard()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        updateUI()
     }
     
     @IBAction func playToPause(_ sender: Any) {
@@ -149,12 +155,31 @@ class ActionController: UIViewController {
         
         index += 1
     }
+    
+    func updateUI() {
+        DispatchQueue.main.async {
+            self.navigationController?.navigationBar.barTintColor = Theme.current.toolbarColor
+            self.tabBarController?.tabBar.barTintColor = Theme.current.toolbarColor
+            
+            self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: Theme.current.textColor]
+            self.tabBarController?.tabBar.tintColor = Colors.current.buttonColor
+            self.tabBarController?.tabBar.unselectedItemTintColor = UIColor(named: "UnselectedTitleColor")
+            
+            self.navigationItem.rightBarButtonItem?.tintColor = Colors.current.buttonColor
+            self.navigationItem.leftBarButtonItem?.tintColor = Colors.current.buttonColor
+            
+            self.navigationController?.navigationBar.barStyle = Theme.current.barStyle
+            
+            self.view.backgroundColor = Theme.current.backgroundColor
+            self.titleAsana.textColor = Theme.current.textColor
+            self.progressBar.fontColor = Theme.current.textColor
+            self.progressBar.backgroundColor = Theme.current.backgroundColor
+        }
+    }
 }
 
 extension ActionController : GADInterstitialDelegate {
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-        AdController.ad.getInterstitialAd(delegate: self)
-
         stopAction()
     }
 }

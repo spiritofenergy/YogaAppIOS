@@ -17,10 +17,16 @@
 		EA18DF2925816FE3006A52FF /* AsanaView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA18DF2825816FE3006A52FF /* AsanaView.storyboard */; };
 		EA18DF2C2581745E006A52FF /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18DF2B2581745E006A52FF /* Theme.swift */; };
 		EA18DF2E258174EF006A52FF /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18DF2D258174EF006A52FF /* ThemeProtocol.swift */; };
-		EA18DF302581750E006A52FF /* DefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18DF2F2581750E006A52FF /* DefaultTheme.swift */; };
-		EA18DF3225817996006A52FF /* RedTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18DF3125817996006A52FF /* RedTheme.swift */; };
+		EA18DF3725818429006A52FF /* AsanaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94B049256D960400DFDD0E /* AsanaController.swift */; };
+		EA18DF3A25818758006A52FF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18DF3925818758006A52FF /* Colors.swift */; };
+		EA18DF3C25818790006A52FF /* ColorsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18DF3B25818790006A52FF /* ColorsProtocol.swift */; };
+		EA18DF3F25818902006A52FF /* DefaultColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18DF3D2581882C006A52FF /* DefaultColors.swift */; };
+		EA18DF41258189CA006A52FF /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18DF40258189CA006A52FF /* LightTheme.swift */; };
+		EA18DF43258189D7006A52FF /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18DF42258189D7006A52FF /* DarkTheme.swift */; };
 		EA56E8AF25799090005C2D3C /* OpenImageInCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA56E8AE2579908F005C2D3C /* OpenImageInCard.swift */; };
 		EA62081E2574E55500B46D35 /* ProtocolClickCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA62081D2574E55500B46D35 /* ProtocolClickCollectionCell.swift */; };
+		EA8D86782583922800ABD6CF /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D86772583922800ABD6CF /* AddViewController.swift */; };
+		EA8D867A258398AE00ABD6CF /* CongratulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D8679258398AE00ABD6CF /* CongratulationsViewController.swift */; };
 		EA8DDCBE257EBDA600C3A38C /* MainListTableAdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8DDCBD257EBDA600C3A38C /* MainListTableAdCell.swift */; };
 		EA8DDCC0257EC9B100C3A38C /* ModelAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8DDCBF257EC9B100C3A38C /* ModelAdController.swift */; };
 		EA8DDCEF257EF11800C3A38C /* GADTMediumTemplateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8DDCE4257EF11800C3A38C /* GADTMediumTemplateView.xib */; };
@@ -28,12 +34,16 @@
 		EA8DDCF1257EF11800C3A38C /* GADTSmallTemplateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8DDCE8257EF11800C3A38C /* GADTSmallTemplateView.xib */; };
 		EA8DDCF2257EF11800C3A38C /* GADTTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8DDCE9257EF11800C3A38C /* GADTTemplateView.m */; };
 		EA8DDCF3257EF11800C3A38C /* GADTMediumTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8DDCEA257EF11800C3A38C /* GADTMediumTemplateView.m */; };
+		EA8E46ED259B6311000CAD12 /* ViewClickBtnDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8E46EC259B6311000CAD12 /* ViewClickBtnDelegate.swift */; };
+		EA8EC73D259C7CE300079B0D /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8EC73C259C7CE300079B0D /* CardView.xib */; };
+		EA8EC73F259C7D0300079B0D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EC73E259C7D0300079B0D /* CardView.swift */; };
+		EA8ECDBF259A8911002E43E7 /* VProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ECDBE259A8911002E43E7 /* VProfileCard.swift */; };
+		EA8ECDC1259A892E002E43E7 /* VProfileCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8ECDC0259A892E002E43E7 /* VProfileCard.xib */; };
 		EA90E29F256BB34300C473B8 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA90E29E256BB34300C473B8 /* AuthController.swift */; };
 		EA90E2A1256BC06700C473B8 /* ModelFireBaseDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA90E2A0256BC06700C473B8 /* ModelFireBaseDB.swift */; };
 		EA9212E5256E3004003D084E /* ImageOfSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9212E4256E3004003D084E /* ImageOfSlider.swift */; };
 		EA93946525779FB600EB6EDF /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93946425779FB600EB6EDF /* FavoriteViewController.swift */; };
 		EA9394672577BEB000EB6EDF /* ActionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9394662577BEB000EB6EDF /* ActionController.swift */; };
-		EA94B04A256D960400DFDD0E /* AsanaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94B049256D960400DFDD0E /* AsanaController.swift */; };
 		EA95FC6B258154760045AC33 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA95FC6A258154760045AC33 /* Colors.xcassets */; };
 		EA95FC6E258155DF0045AC33 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA95FC6D258155DF0045AC33 /* UIImageViewExtension.swift */; };
 		EA975DF5256AD4CC0094C4B6 /* MainListTableCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA975DF4256AD4CC0094C4B6 /* MainListTableCardCell.swift */; };
@@ -62,10 +72,15 @@
 		EA18DF2825816FE3006A52FF /* AsanaView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AsanaView.storyboard; sourceTree = "<group>"; };
 		EA18DF2B2581745E006A52FF /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		EA18DF2D258174EF006A52FF /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
-		EA18DF2F2581750E006A52FF /* DefaultTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTheme.swift; sourceTree = "<group>"; };
-		EA18DF3125817996006A52FF /* RedTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedTheme.swift; sourceTree = "<group>"; };
+		EA18DF3925818758006A52FF /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		EA18DF3B25818790006A52FF /* ColorsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsProtocol.swift; sourceTree = "<group>"; };
+		EA18DF3D2581882C006A52FF /* DefaultColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultColors.swift; sourceTree = "<group>"; };
+		EA18DF40258189CA006A52FF /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
+		EA18DF42258189D7006A52FF /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
 		EA56E8AE2579908F005C2D3C /* OpenImageInCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenImageInCard.swift; sourceTree = "<group>"; };
 		EA62081D2574E55500B46D35 /* ProtocolClickCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolClickCollectionCell.swift; sourceTree = "<group>"; };
+		EA8D86772583922800ABD6CF /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		EA8D8679258398AE00ABD6CF /* CongratulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsViewController.swift; sourceTree = "<group>"; };
 		EA8DDCBD257EBDA600C3A38C /* MainListTableAdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListTableAdCell.swift; sourceTree = "<group>"; };
 		EA8DDCBF257EC9B100C3A38C /* ModelAdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAdController.swift; sourceTree = "<group>"; };
 		EA8DDCE4257EF11800C3A38C /* GADTMediumTemplateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GADTMediumTemplateView.xib; sourceTree = "<group>"; };
@@ -77,6 +92,11 @@
 		EA8DDCEA257EF11800C3A38C /* GADTMediumTemplateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADTMediumTemplateView.m; sourceTree = "<group>"; };
 		EA8DDCEB257EF11800C3A38C /* GADTSmallTemplateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADTSmallTemplateView.h; sourceTree = "<group>"; };
 		EA8DDCF4257EF34F00C3A38C /* YogaApp_BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YogaApp_BridgingHeader.h; sourceTree = "<group>"; };
+		EA8E46EC259B6311000CAD12 /* ViewClickBtnDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewClickBtnDelegate.swift; sourceTree = "<group>"; };
+		EA8EC73C259C7CE300079B0D /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		EA8EC73E259C7D0300079B0D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		EA8ECDBE259A8911002E43E7 /* VProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VProfileCard.swift; sourceTree = "<group>"; };
+		EA8ECDC0259A892E002E43E7 /* VProfileCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VProfileCard.xib; sourceTree = "<group>"; };
 		EA90E29E256BB34300C473B8 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		EA90E2A0256BC06700C473B8 /* ModelFireBaseDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFireBaseDB.swift; sourceTree = "<group>"; };
 		EA9212E4256E3004003D084E /* ImageOfSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOfSlider.swift; sourceTree = "<group>"; };
@@ -123,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				EA18DF1525815EF2006A52FF /* AddView.storyboard */,
+				EA8D86772583922800ABD6CF /* AddViewController.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -130,8 +151,9 @@
 		EA18DF1C258161C8006A52FF /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				EA18DF1925816155006A52FF /* ProfileView.storyboard */,
+				EA8ECDBD259A88C9002E43E7 /* SettingViews */,
 				EABAABF5256CE11000F69698 /* ProfileController.swift */,
+				EA18DF1925816155006A52FF /* ProfileView.storyboard */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -158,6 +180,7 @@
 		EA18DF2325816DBC006A52FF /* MainList */ = {
 			isa = PBXGroup;
 			children = (
+				EA8EC739259C7C6300079B0D /* CardView */,
 				EA18DF34258179E4006A52FF /* Asana */,
 				EA18DF33258179D8006A52FF /* Favorite */,
 				EA18DF1F25816564006A52FF /* MainListView.storyboard */,
@@ -176,8 +199,8 @@
 			children = (
 				EA18DF2B2581745E006A52FF /* Theme.swift */,
 				EA18DF2D258174EF006A52FF /* ThemeProtocol.swift */,
-				EA18DF2F2581750E006A52FF /* DefaultTheme.swift */,
-				EA18DF3125817996006A52FF /* RedTheme.swift */,
+				EA18DF40258189CA006A52FF /* LightTheme.swift */,
+				EA18DF42258189D7006A52FF /* DarkTheme.swift */,
 			);
 			path = Themes;
 			sourceTree = "<group>";
@@ -204,8 +227,18 @@
 			isa = PBXGroup;
 			children = (
 				EA18DF2425816E66006A52FF /* CongratulationsView.storyboard */,
+				EA8D8679258398AE00ABD6CF /* CongratulationsViewController.swift */,
 			);
 			path = Congratulation;
+			sourceTree = "<group>";
+		};
+		EA18DF3825818738006A52FF /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				EA18DF3925818758006A52FF /* Colors.swift */,
+				EA18DF3D2581882C006A52FF /* DefaultColors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		EA8DDCE3257EF11800C3A38C /* nativetemplates */ = {
@@ -223,9 +256,37 @@
 			path = nativetemplates;
 			sourceTree = "<group>";
 		};
+		EA8E46E7259B5DC5000CAD12 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EA8E46EC259B6311000CAD12 /* ViewClickBtnDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EA8EC739259C7C6300079B0D /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				EA8EC73E259C7D0300079B0D /* CardView.swift */,
+				EA8EC73C259C7CE300079B0D /* CardView.xib */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
+		EA8ECDBD259A88C9002E43E7 /* SettingViews */ = {
+			isa = PBXGroup;
+			children = (
+				EA8ECDBE259A8911002E43E7 /* VProfileCard.swift */,
+				EA8ECDC0259A892E002E43E7 /* VProfileCard.xib */,
+			);
+			path = SettingViews;
+			sourceTree = "<group>";
+		};
 		EA95FC66258153E00045AC33 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EA18DF3B25818790006A52FF /* ColorsProtocol.swift */,
+				EA18DF3825818738006A52FF /* Colors */,
 				EA18DF2A2581743A006A52FF /* Themes */,
 				EA95FC6A258154760045AC33 /* Colors.xcassets */,
 			);
@@ -291,6 +352,7 @@
 		EAF909F12562A003006E6C55 /* YogaApp */ = {
 			isa = PBXGroup;
 			children = (
+				EA8E46E7259B5DC5000CAD12 /* Protocol */,
 				EA95FC6C2581555A0045AC33 /* Templates */,
 				EA95FC692581540F0045AC33 /* Views */,
 				EA95FC68258154080045AC33 /* Models */,
@@ -381,6 +443,8 @@
 			files = (
 				EA18DF1A25816155006A52FF /* ProfileView.storyboard in Resources */,
 				EA18DF2525816E66006A52FF /* CongratulationsView.storyboard in Resources */,
+				EA8EC73D259C7CE300079B0D /* CardView.xib in Resources */,
+				EA8ECDC1259A892E002E43E7 /* VProfileCard.xib in Resources */,
 				EA8DDCF1257EF11800C3A38C /* GADTSmallTemplateView.xib in Resources */,
 				EAF909FF2562A005006E6C55 /* LaunchScreen.storyboard in Resources */,
 				EA975DF9256AD78A0094C4B6 /* GoogleService-Info.plist in Resources */,
@@ -463,27 +527,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA8ECDBF259A8911002E43E7 /* VProfileCard.swift in Sources */,
 				EA8DDCF3257EF11800C3A38C /* GADTMediumTemplateView.m in Sources */,
-				EA94B04A256D960400DFDD0E /* AsanaController.swift in Sources */,
+				EA18DF3A25818758006A52FF /* Colors.swift in Sources */,
+				EA8D86782583922800ABD6CF /* AddViewController.swift in Sources */,
 				EA8DDCC0257EC9B100C3A38C /* ModelAdController.swift in Sources */,
-				EA18DF302581750E006A52FF /* DefaultTheme.swift in Sources */,
 				EA18DF2E258174EF006A52FF /* ThemeProtocol.swift in Sources */,
+				EA18DF41258189CA006A52FF /* LightTheme.swift in Sources */,
+				EA18DF43258189D7006A52FF /* DarkTheme.swift in Sources */,
 				EA9212E5256E3004003D084E /* ImageOfSlider.swift in Sources */,
+				EA8EC73F259C7D0300079B0D /* CardView.swift in Sources */,
 				EABAABF6256CE11000F69698 /* ProfileController.swift in Sources */,
 				EA8DDCF2257EF11800C3A38C /* GADTTemplateView.m in Sources */,
 				EA9394672577BEB000EB6EDF /* ActionController.swift in Sources */,
 				EA90E2A1256BC06700C473B8 /* ModelFireBaseDB.swift in Sources */,
+				EA18DF3725818429006A52FF /* AsanaController.swift in Sources */,
 				EA8DDCBE257EBDA600C3A38C /* MainListTableAdCell.swift in Sources */,
 				EA95FC6E258155DF0045AC33 /* UIImageViewExtension.swift in Sources */,
 				EA62081E2574E55500B46D35 /* ProtocolClickCollectionCell.swift in Sources */,
+				EA8E46ED259B6311000CAD12 /* ViewClickBtnDelegate.swift in Sources */,
 				EA8DDCF0257EF11800C3A38C /* GADTSmallTemplateView.m in Sources */,
 				EA975DF5256AD4CC0094C4B6 /* MainListTableCardCell.swift in Sources */,
+				EA8D867A258398AE00ABD6CF /* CongratulationsViewController.swift in Sources */,
 				EA56E8AF25799090005C2D3C /* OpenImageInCard.swift in Sources */,
 				EA90E29F256BB34300C473B8 /* AuthController.swift in Sources */,
-				EA18DF3225817996006A52FF /* RedTheme.swift in Sources */,
 				EAF909F72562A003006E6C55 /* ViewController.swift in Sources */,
 				EAF909F32562A003006E6C55 /* AppDelegate.swift in Sources */,
 				EA18DF2C2581745E006A52FF /* Theme.swift in Sources */,
+				EA18DF3C25818790006A52FF /* ColorsProtocol.swift in Sources */,
+				EA18DF3F25818902006A52FF /* DefaultColors.swift in Sources */,
 				EA93946525779FB600EB6EDF /* FavoriteViewController.swift in Sources */,
 				EAF909F52562A003006E6C55 /* SceneDelegate.swift in Sources */,
 			);

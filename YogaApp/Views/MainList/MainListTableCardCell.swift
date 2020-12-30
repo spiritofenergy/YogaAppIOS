@@ -33,6 +33,10 @@ class CardViewController: UITableViewCell {
     @IBOutlet weak var imageSlider: UICollectionView!
     @IBOutlet var addToAction: UIButton!
     @IBOutlet weak var opensImages: UICollectionView!
+    @IBOutlet weak var commentView: UIView!
+    @IBOutlet weak var likeView: UIView!
+    @IBOutlet weak var addView: UIView!
+    @IBOutlet weak var commentImage: UIImageView!
     
     var card: Card = Card()
     
@@ -58,36 +62,38 @@ class CardViewController: UITableViewCell {
        
     */
     @IBAction func liked(_ sender: Any) {
-        if likeButton.isSelected {
-            ModelFireBaseDB.objectDB.cards[row].likes -= 1
-            ModelFireBaseDB.objectDB.cards[row].isCheck = false
-            
-            likeButton.isSelected = false
-            likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
-            likeButton.setTitle("\(card.likes)", for: .normal)
-            
-            db.collection("likes").document(card.id!).updateData([id : false])
-            db.collection("asunaRU").document(card.id!).updateData(["likes" : card.likes])
-        } else {
-            ModelFireBaseDB.objectDB.cards[row].likes += 1
-            ModelFireBaseDB.objectDB.cards[row].isCheck = true
-            
-            likeButton.isSelected = true
-            likeButton.setImage(UIImage(systemName: "heart.fill"), for: .selected)
-            likeButton.setTitle(String(card.likes), for: .selected)
-            
-            db.collection("likes").document(card.id!).getDocument { (result, error) in
-                if let error = error {
-                    print(error.localizedDescription)
-                } else {
-                    if !result!.exists {
-                        self.db.collection("likes").document(self.card.id!).setData([self.id! : true])
+        if Auth.auth().currentUser != nil {
+            if likeButton.isSelected {
+                ModelFireBaseDB.objectDB.cards[row].likes -= 1
+                ModelFireBaseDB.objectDB.cards[row].isCheck = false
+                
+                likeButton.isSelected = false
+                likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+                likeButton.setTitle("\(card.likes)", for: .normal)
+                
+                db.collection("likes").document(card.id!).updateData([id : false])
+                db.collection("asunaRU").document(card.id!).updateData(["likes" : card.likes])
+            } else {
+                ModelFireBaseDB.objectDB.cards[row].likes += 1
+                ModelFireBaseDB.objectDB.cards[row].isCheck = true
+                
+                likeButton.isSelected = true
+                likeButton.setImage(UIImage(systemName: "heart.fill"), for: .selected)
+                likeButton.setTitle(String(card.likes), for: .selected)
+                
+                db.collection("likes").document(card.id!).getDocument { (result, error) in
+                    if let error = error {
+                        print(error.localizedDescription)
                     } else {
-                        self.db.collection("likes").document(self.card.id!).updateData([self.id! : true])
+                        if !result!.exists {
+                            self.db.collection("likes").document(self.card.id!).setData([self.id! : true])
+                        } else {
+                            self.db.collection("likes").document(self.card.id!).updateData([self.id! : true])
+                        }
                     }
                 }
+                db.collection("asunaRU").document(card.id!).updateData(["likes" : card.likes])
             }
-            db.collection("asunaRU").document(card.id!).updateData(["likes" : card.likes])
         }
     }
     
@@ -160,15 +166,25 @@ class CardViewController: UITableViewCell {
     }
     
     func updateUI() {
+        backgroundColor = Theme.current.backgroundColor
         bgView.clipsToBounds = true
         
-        bgView.backgroundColor = UIColor.systemBackground
+        bgView.backgroundColor = Theme.current.backgroundColor
         bgView.layer.cornerRadius = 5
         bgView.layer.masksToBounds = false
         
-        bgView.layer.shadowColor = UIColor.black.withAlphaComponent(0.3).cgColor
+        bgView.layer.shadowColor = Theme.current.shadowColor.withAlphaComponent(0.3).cgColor
         bgView.layer.shadowOffset = CGSize(width: 0, height: 0)
         bgView.layer.shadowOpacity = 0.8
+        
+        likeView.backgroundColor = Theme.current.backgroundColor
+        commentView.backgroundColor = Theme.current.backgroundColor
+        addView.backgroundColor = Theme.current.backgroundColor
+        imageMain.backgroundColor = Theme.current.backgroundColor
+        opensImages.backgroundColor = Theme.current.backgroundColor
+        imageSlider.backgroundColor = Theme.current.backgroundColor
+        title.textColor = Theme.current.textColor
+        shortDescriptio.textColor = Theme.current.textColor
     }
 
 }

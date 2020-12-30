@@ -44,6 +44,7 @@ class ModelFireBaseDB: NSObject {
         getOpensCard()
         getBreathesCard()
         cards = []
+        favorite = []
         
         if Auth.auth().currentUser != nil {
             userID = Auth.auth().currentUser!.uid
@@ -82,10 +83,15 @@ class ModelFireBaseDB: NSObject {
                         print(error.localizedDescription)
                     } else {
                         for document in documentLike!.documents {
-                            if document[self.userID!] != nil {
-                                for (index, card) in self.cards.enumerated() {
-                                    if card.id == document.documentID {
-                                        self.cards[index].isCheck = document[self.userID!] as! Bool
+                            if self.userID != nil {
+                                if document[self.userID!] != nil {
+                                    for (index, card) in self.cards.enumerated() {
+                                        if card.id == document.documentID {
+                                            self.cards[index].isCheck = document[self.userID!] as! Bool
+                                            if self.cards[index].isCheck {
+                                                self.favorite.append(card)
+                                            }
+                                        }
                                     }
                                 }
                             }

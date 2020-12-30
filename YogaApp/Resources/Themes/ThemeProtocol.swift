@@ -9,5 +9,9 @@
 import UIKit
 
 protocol ThemeProtocol {
-    var buttonColor: UIColor { get }
+    var textColor: UIColor { get }
+    var shadowColor: UIColor { get }
+    var barStyle: UIBarStyle { get }
+    var backgroundColor: UIColor { get }
+    var toolbarColor: UIColor { get }
 }

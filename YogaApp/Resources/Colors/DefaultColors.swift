@@ -1,5 +1,5 @@
 //
-//  RedTheme.swift
+//  DefaultColors.swift
 //  YogaApp
 //
 //  Created by Nill Simon on 10.12.2020.
@@ -8,7 +8,6 @@
 
 import UIKit
 
-class RedTheme : ThemeProtocol {
-    var buttonColor: UIColor = UIColor(named: "RedThemeColor")!
+class DefaultColors : ColorsProtocol {
+    var buttonColor: UIColor = UIColor.link
 }
-

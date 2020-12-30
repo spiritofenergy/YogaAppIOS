@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import GoogleMobileAds
 
 class ViewController: UIViewController {
@@ -19,17 +20,24 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        AdController.ad.getInterstitialAd(delegate: self)
+        updateUI()
         
         ModelFireBaseDB.objectDB.actions = []
         
-        navigationItem.leftBarButtonItem?.tintColor = Theme.current.buttonColor
         navigationItem.rightBarButtonItem = nil
         
         mainList.dataSource = self
         mainList.delegate = self
         
+        if Auth.auth().currentUser == nil {
+            let actionStoryboard = UIStoryboard(name: "AuthView", bundle: nil)
+            let nc = actionStoryboard.instantiateViewController(withIdentifier: "authID") as! UINavigationController
+            
+            present(nc, animated: true, completion: nil)
+        }
+        
         NotificationCenter.default.addObserver(forName: NSNotification.Name("reloadDB"), object: nil, queue: nil) { (notification) in
+            print("reload")
             self.mainList.reloadData()
             
             self.countAd = Int(floor(Double(ModelFireBaseDB.objectDB.cards.count) / 3.0))
@@ -46,7 +54,7 @@ class ViewController: UIViewController {
             if ModelFireBaseDB.objectDB.actions.count > 0 {
                 DispatchQueue.main.async {
                     let button = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.play, target: self, action: #selector(self.startAction(_:)))
-                    button.tintColor = Theme.current.buttonColor
+                    button.tintColor = Colors.current.buttonColor
                     self.navigationItem.rightBarButtonItem = button
                 }
             } else {
@@ -61,6 +69,15 @@ class ViewController: UIViewController {
                 }
             }
         }
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("changeTheme"), object: nil, queue: nil) { (note) in
+            self.mainList.reloadData()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        updateUI()
+        AdController.ad.getInterstitialAd(delegate: self)
     }
     
     @IBAction func startAction(_ sender: Any) {
@@ -80,6 +97,24 @@ class ViewController: UIViewController {
             let selectedCard = ModelFireBaseDB.objectDB.list[(sender as! Int)] as! Card
             
             (segue.destination as! AsanaController).card = selectedCard
+        }
+    }
+    
+    func updateUI() {
+        DispatchQueue.main.async {
+            self.navigationController?.navigationBar.barTintColor = Theme.current.toolbarColor
+            self.tabBarController?.tabBar.barTintColor = Theme.current.toolbarColor
+            
+            self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: Theme.current.textColor]
+            self.tabBarController?.tabBar.tintColor = Colors.current.buttonColor
+            self.tabBarController?.tabBar.unselectedItemTintColor = UIColor(named: "UnselectedTitleColor")
+            
+            self.navigationItem.rightBarButtonItem?.tintColor = Colors.current.buttonColor
+            self.navigationItem.leftBarButtonItem?.tintColor = Colors.current.buttonColor
+            
+            self.navigationController?.navigationBar.barStyle = Theme.current.barStyle
+            
+            self.mainList.backgroundColor = Theme.current.backgroundColor
         }
     }
 }
@@ -169,7 +204,6 @@ extension ViewController : GADInterstitialDelegate {
     }
     
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-        AdController.ad.getInterstitialAd(delegate: self)
         if !self.isStart {
             let actionStoryboard = UIStoryboard(name: "ActionView", bundle: nil)
             let nc = actionStoryboard.instantiateViewController(withIdentifier: "startAction") as! UINavigationController
@@ -177,6 +211,7 @@ extension ViewController : GADInterstitialDelegate {
             
             present(nc, animated: true, completion: nil)
         } else {
+            AdController.ad.getInterstitialAd(delegate: self)
             self.isStart = false
         }
     }

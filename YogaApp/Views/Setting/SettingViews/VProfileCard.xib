@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VProfileCard" customModule="YogaApp" customModuleProvider="target">
+            <connections>
+                <outlet property="authBtn" destination="RC2-Eq-fhj" id="RxE-nH-aIU"/>
+                <outlet property="contactLbl" destination="xLq-7u-SnG" id="vPs-Kq-e2K"/>
+                <outlet property="content" destination="wTj-9B-toc" id="8W3-KS-OjP"/>
+                <outlet property="imageImg" destination="y4G-tj-LVF" id="HIO-U3-vFg"/>
+                <outlet property="nameLbl" destination="MQR-wu-qA6" id="A23-bm-6pO"/>
+                <outlet property="statusLbl" destination="Afc-Fw-qZS" id="md3-g2-CxU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="wTj-9B-toc">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="y4G-tj-LVF">
+                    <rect key="frame" x="20" y="21.5" width="100" height="97.5"/>
+                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="dID-my-CHP"/>
+                        <constraint firstAttribute="width" constant="100" id="t7d-YJ-IBH"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQR-wu-qA6">
+                    <rect key="frame" x="145" y="20" width="49" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afc-Fw-qZS">
+                    <rect key="frame" x="145" y="69" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLq-7u-SnG">
+                    <rect key="frame" x="145" y="54" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RC2-Eq-fhj">
+                    <rect key="frame" x="145" y="64" width="100" height="30"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="vJR-JJ-DKy"/>
+                    </constraints>
+                    <state key="normal" title="Войти">
+                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="authClick:" destination="-1" eventType="touchUpInside" id="2tH-ST-rNb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Afc-Fw-qZS" firstAttribute="top" secondItem="xLq-7u-SnG" secondAttribute="bottom" constant="15" id="0n4-bg-uoT"/>
+                <constraint firstItem="y4G-tj-LVF" firstAttribute="top" secondItem="wTj-9B-toc" secondAttribute="top" constant="20" id="2Xj-JV-HdG"/>
+                <constraint firstItem="xLq-7u-SnG" firstAttribute="top" secondItem="MQR-wu-qA6" secondAttribute="bottom" constant="5" id="2lO-qi-onn"/>
+                <constraint firstItem="MQR-wu-qA6" firstAttribute="leading" secondItem="y4G-tj-LVF" secondAttribute="trailing" constant="25" id="5c9-XO-sGc"/>
+                <constraint firstItem="RC2-Eq-fhj" firstAttribute="leading" secondItem="y4G-tj-LVF" secondAttribute="trailing" constant="25" id="Llh-Jr-FcK"/>
+                <constraint firstItem="RC2-Eq-fhj" firstAttribute="top" secondItem="xLq-7u-SnG" secondAttribute="bottom" constant="10" id="Lxt-dD-BZe"/>
+                <constraint firstItem="xLq-7u-SnG" firstAttribute="leading" secondItem="y4G-tj-LVF" secondAttribute="trailing" constant="25" id="Sbt-c1-6vT"/>
+                <constraint firstItem="y4G-tj-LVF" firstAttribute="leading" secondItem="YHF-4J-Ncd" secondAttribute="leading" constant="20" id="XgI-ri-LvQ"/>
+                <constraint firstItem="YHF-4J-Ncd" firstAttribute="bottom" secondItem="y4G-tj-LVF" secondAttribute="bottom" constant="20" id="he7-OK-XUU"/>
+                <constraint firstItem="MQR-wu-qA6" firstAttribute="leading" secondItem="y4G-tj-LVF" secondAttribute="trailing" constant="25" id="hpa-lT-s2F"/>
+                <constraint firstItem="MQR-wu-qA6" firstAttribute="top" secondItem="wTj-9B-toc" secondAttribute="top" constant="20" id="jqe-Zc-ef7"/>
+                <constraint firstItem="Afc-Fw-qZS" firstAttribute="leading" secondItem="y4G-tj-LVF" secondAttribute="trailing" constant="25" id="tvd-lg-JfC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="YHF-4J-Ncd"/>
+            <point key="canvasLocation" x="227.536231884058" y="3.3482142857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="person" catalog="system" width="128" height="117"/>
+    </resources>
+</document>

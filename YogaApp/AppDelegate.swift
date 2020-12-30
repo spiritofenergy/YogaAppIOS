@@ -24,6 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        if UserDefaults.standard.object(forKey: "lightTheme") != nil {
+            Theme.current = UserDefaults.standard.bool(forKey: "lightTheme") ? LightTheme() : DarkTheme()
+        }
+        
         FirebaseApp.configure()
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         

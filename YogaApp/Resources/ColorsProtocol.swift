@@ -1,5 +1,5 @@
 //
-//  DefaultTheme.swift
+//  ColorsProtocol.swift
 //  YogaApp
 //
 //  Created by Nill Simon on 10.12.2020.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class DefaultTheme : ThemeProtocol {
-    var buttonColor: UIColor = UIColor.link
+protocol ColorsProtocol {
+    var buttonColor: UIColor { get }
 }

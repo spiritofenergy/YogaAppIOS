@@ -1,5 +1,5 @@
 //
-//  Theme.swift
+//  Colors.swift
 //  YogaApp
 //
 //  Created by Nill Simon on 10.12.2020.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class Theme {
-    static var current: ThemeProtocol = LightTheme()
+class Colors {
+    static var current: ColorsProtocol = DefaultColors()
 }

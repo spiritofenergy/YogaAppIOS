@@ -13,28 +13,33 @@ class ProfileController: UIViewController {
     
     let settings = UserDefaults.standard
     
-    @IBOutlet weak var nameUser: UILabel!
-    @IBOutlet weak var imageProfile: UIImageView!
-    @IBOutlet weak var contactUser: UILabel!
-    @IBOutlet weak var statusUser: UILabel!
+    
+    @IBOutlet weak var profileCard: VProfileCard!
+    //    @IBOutlet weak var nameUser: UILabel!
+//    @IBOutlet weak var imageProfile: UIImageView!
+//    @IBOutlet weak var contactUser: UILabel!
+//    @IBOutlet weak var statusUser: UILabel!
     @IBOutlet weak var settingTime: UISegmentedControl!
     @IBOutlet weak var musicToggle: UISwitch!
     @IBOutlet weak var breatheToggle: UISwitch!
     @IBOutlet weak var shavaToggle: UISwitch!
     @IBOutlet weak var musicChooseBlock: UISegmentedControl!
     @IBOutlet weak var breatheChooseBlock: UISegmentedControl!
-    
+    @IBOutlet weak var titleSettings: UILabel!
+    @IBOutlet weak var subTitleSegment1: UILabel!
+    @IBOutlet weak var subTitleSegment2: UILabel!
+    @IBOutlet weak var titleTime: UILabel!
+    @IBOutlet weak var titleMusic: UILabel!
+    @IBOutlet weak var titleBreathe: UILabel!
+    @IBOutlet weak var titleShava: UILabel!
+    @IBOutlet weak var mainColors: UILabel!
+    @IBOutlet weak var themeTitle: UILabel!
+    @IBOutlet weak var themeToggle: UISwitch!
+    @IBOutlet weak var quit: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let user = Auth.auth().currentUser
-        if let user = user {
-            nameUser.text = user.displayName
-            contactUser.text = user.email ?? user.phoneNumber
-            imageProfile.load(url: user.photoURL)
-            imageProfile.layer.cornerRadius = imageProfile.frame.height / 2
-        }
+        updateUI()
         
         shavaToggle.isOn = true
         
@@ -61,6 +66,19 @@ class ProfileController: UIViewController {
             breatheChooseBlock.selectedSegmentIndex = 0
         }
         
+        if settings.object(forKey: "lightTheme") != nil {
+            themeToggle.isOn = !settings.bool(forKey: "lightTheme")
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        updateUI()
+        
+        if Auth.auth().currentUser == nil {
+            quit.isHidden = true
+        }
+        
+        profileCard.delegate = self
     }
     
     @IBAction func signOut(_ sender: Any) {
@@ -68,9 +86,14 @@ class ProfileController: UIViewController {
         do {
             try firebaseAuth.signOut()
             
-            let sb: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            ModelFireBaseDB.objectDB.getCards()
+            
+            profileCard.commonInit()
+            
+            tabBarController?.selectedIndex = 0
+            let sb: UIStoryboard = UIStoryboard(name: "AuthView", bundle: nil)
             let nextViewController = sb.instantiateViewController(withIdentifier: "authID")
-            nextViewController.modalPresentationStyle = .fullScreen
+            
             self.present(nextViewController, animated: true, completion: nil)
             
         } catch let signOutError as NSError {
@@ -146,14 +169,81 @@ class ProfileController: UIViewController {
         self.settings.set(self.breatheChooseBlock.selectedSegmentIndex, forKey: "breatheIsOn")
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func toggleTheme(_ sender: UISwitch) {
+        if sender.isOn {
+            Theme.current = DarkTheme()
+            settings.set(false, forKey: "lightTheme")
+        } else {
+            settings.set(true, forKey: "lightTheme")
+            Theme.current = LightTheme()
+        }
+        NotificationCenter.default.post(name: NSNotification.Name("changeTheme"), object: self)
+        updateUI()
     }
-    */
+    
+    @IBAction func brownSet(_ sender: Any) {
+    }
+    
+    @IBAction func blueSet(_ sender: Any) {
+    }
+    
+    @IBAction func redSet(_ sender: Any) {
+    }
+    
+    @IBAction func yellowSet(_ sender: Any) {
+    }
+    
+    @IBAction func greenSet(_ sender: Any) {
+    }
+    
+    func updateUI() {
+        DispatchQueue.main.async {            
+            self.navigationController?.navigationBar.barTintColor = Theme.current.toolbarColor
+            self.tabBarController?.tabBar.barTintColor = Theme.current.toolbarColor
+            
+            self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: Theme.current.textColor]
+            self.tabBarController?.tabBar.tintColor = Colors.current.buttonColor
+            self.tabBarController?.tabBar.unselectedItemTintColor = UIColor(named: "UnselectedTitleColor")
+            
+            self.navigationController?.navigationBar.barStyle = Theme.current.barStyle
+            
+            self.view.backgroundColor = Theme.current.backgroundColor
+            
+            self.profileCard.updateUI()
+            
+            self.titleTime.textColor = Theme.current.textColor
+            self.titleMusic.textColor = Theme.current.textColor
+            self.titleShava.textColor = Theme.current.textColor
+            self.titleBreathe.textColor = Theme.current.textColor
+            self.titleSettings.textColor = Theme.current.textColor
+            self.themeTitle.textColor = Theme.current.textColor
+            self.subTitleSegment1.textColor = Theme.current.textColor
+            self.subTitleSegment2.textColor = Theme.current.textColor
+            self.mainColors.textColor = Theme.current.textColor
+            
+            let attr =  [NSAttributedString.Key.foregroundColor: Theme.current.textColor]
+            let attrSelected =  [NSAttributedString.Key.foregroundColor: UIColor.black]
+            
+            self.musicChooseBlock.setTitleTextAttributes(attr, for: .normal)
+            self.musicChooseBlock.setTitleTextAttributes(attrSelected, for: .selected)
+            
+            self.breatheChooseBlock.setTitleTextAttributes(attr, for: .normal)
+            self.breatheChooseBlock.setTitleTextAttributes(attrSelected, for: .selected)
+            
+            self.settingTime.setTitleTextAttributes(attr, for: .normal)
+            self.settingTime.setTitleTextAttributes(attrSelected, for: .selected)
+        }
+    }
 
+}
+
+extension ProfileController : ViewClickBtnDelegate {
+    func onClick() {
+        
+        let actionStoryboard = UIStoryboard(name: "AuthView", bundle: nil)
+        let nc = actionStoryboard.instantiateViewController(withIdentifier: "authID") as! UINavigationController
+        
+        present(nc, animated: true, completion: nil)
+        
+    }
 }

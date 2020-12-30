@@ -58,11 +58,13 @@ class AuthController: UIViewController, GIDSignInDelegate {
         
         // Если аутентификация произведена, то показываем главное View
         if Auth.auth().currentUser != nil {
-            let sb: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let nextViewController = sb.instantiateViewController(withIdentifier: "MainInputInAppID")
-            nextViewController.modalPresentationStyle = .fullScreen
-            present(nextViewController, animated: true, completion: nil)
+            ModelFireBaseDB.objectDB.getCards()
+            dismiss(animated: true, completion: nil)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        updateUI()
     }
     
     @IBAction func signInGoogle(_ sender: Any) {
@@ -73,4 +75,21 @@ class AuthController: UIViewController, GIDSignInDelegate {
     @IBAction func signInInst(_ sender: Any) {
     }
 
+    func updateUI() {
+        DispatchQueue.main.async {
+            self.navigationController?.navigationBar.barTintColor = Theme.current.toolbarColor
+            self.tabBarController?.tabBar.barTintColor = Theme.current.toolbarColor
+            
+            self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: Theme.current.textColor]
+            self.tabBarController?.tabBar.tintColor = Colors.current.buttonColor
+            self.tabBarController?.tabBar.unselectedItemTintColor = UIColor(named: "UnselectedTitleColor")
+            
+            self.navigationItem.rightBarButtonItem?.tintColor = Colors.current.buttonColor
+            self.navigationItem.leftBarButtonItem?.tintColor = Colors.current.buttonColor
+            
+            self.navigationController?.navigationBar.barStyle = Theme.current.barStyle
+            
+            self.view.backgroundColor = Theme.current.backgroundColor
+        }
+    }
 }
