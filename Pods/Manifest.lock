@@ -282,6 +282,7 @@ PODS:
   - FirebaseStorage (7.1.0):
     - FirebaseCore (~> 7.0)
     - GTMSessionFetcher/Core (~> 1.4)
+  - FunctionalSwift (1.2.0)
   - Google-Mobile-Ads-SDK (7.69.0):
     - GoogleAppMeasurement (~> 7.0)
     - GoogleUserMessagingPlatform (~> 1.1)
@@ -351,12 +352,38 @@ PODS:
     - GTMSessionFetcher/Core (= 1.5.0)
   - leveldb-library (1.22)
   - MBCircularProgressBar (0.3.5)
+  - MoneyAuth (2.0.0):
+    - FunctionalSwift
+    - YooMoneyCoreApi
   - nanopb (2.30906.0):
     - nanopb/decode (= 2.30906.0)
     - nanopb/encode (= 2.30906.0)
   - nanopb/decode (2.30906.0)
   - nanopb/encode (2.30906.0)
   - PromisesObjC (1.2.11)
+  - When (4.0.0)
+  - YandexMobileMetrica/Dynamic (3.12.0):
+    - YandexMobileMetrica/Dynamic/Core (= 3.12.0)
+    - YandexMobileMetrica/Dynamic/Crashes (= 3.12.0)
+  - YandexMobileMetrica/Dynamic/Core (3.12.0)
+  - YandexMobileMetrica/Dynamic/Crashes (3.12.0):
+    - YandexMobileMetrica/Dynamic/Core
+  - YooKassaPayments (5.1.0):
+    - FunctionalSwift (~> 1.2.0)
+    - MoneyAuth (~> 2.0.0)
+    - When (~> 4.0.0)
+    - YandexMobileMetrica/Dynamic (~> 3.12.0)
+    - YooKassaPaymentsApi (~> 2.3.0)
+    - YooKassaWalletApi (~> 2.2.0)
+    - YooMoneyCoreApi (~> 1.9.0)
+  - YooKassaPaymentsApi (2.3.0):
+    - FunctionalSwift (~> 1.2.0)
+    - YooMoneyCoreApi (~> 1.9.0)
+  - YooKassaWalletApi (2.2.0):
+    - FunctionalSwift (~> 1.2.0)
+    - YooMoneyCoreApi (~> 1.9.0)
+  - YooMoneyCoreApi (1.9.0):
+    - FunctionalSwift (~> 1.2.0)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -366,8 +393,18 @@ DEPENDENCIES:
   - Google-Mobile-Ads-SDK
   - GoogleSignIn
   - MBCircularProgressBar
+  - YooKassaPayments (from `https://github.com/yoomoney/yookassa-payments-swift.git`, tag `5.1.0`)
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - FunctionalSwift
+    - When
+    - YandexMobileMetrica
+    - YooKassaPaymentsApi
+    - YooKassaWalletApi
+    - YooMoneyCoreApi
+  https://github.com/yoomoney-tech/cocoa-pod-specs.git:
+    - MoneyAuth
   trunk:
     - abseil
     - AppAuth
@@ -395,6 +432,16 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
 
+EXTERNAL SOURCES:
+  YooKassaPayments:
+    :git: https://github.com/yoomoney/yookassa-payments-swift.git
+    :tag: 5.1.0
+
+CHECKOUT OPTIONS:
+  YooKassaPayments:
+    :git: https://github.com/yoomoney/yookassa-payments-swift.git
+    :tag: 5.1.0
+
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
@@ -407,6 +454,7 @@ SPEC CHECKSUMS:
   FirebaseFirestore: bbf303f0638a93e6ecb38433aad283cebdfece5f
   FirebaseInstallations: 3de38553e86171b5f81d83cdeef63473d37bfdb0
   FirebaseStorage: 80e2cd5200791540ca544f4dcac5e6b56994fc97
+  FunctionalSwift: 1b839fcf50b8db067885938df54f818518356dbb
   Google-Mobile-Ads-SDK: 2f288748a42920d1c744946a460896a95b0e9110
   GoogleAppMeasurement: 89e1a64593f968713b0506ba1b53b38a154bf9a5
   GoogleDataTransport: e4085e6762f36a6141738f46b0153473ce57fb18
@@ -419,9 +467,16 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
+  MoneyAuth: 906847277f9b3e0c59e920133dad70a0933374ab
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
+  When: 4ffc88d535a094ad4bd5eaf2fd187de747e716d1
+  YandexMobileMetrica: 7ba67267e1ef841f77d5db17a5091b8e9eba911f
+  YooKassaPayments: 0f0f3a9597a84f86eb979f81c852392850c5ef3a
+  YooKassaPaymentsApi: 66302803d0389fbc27238d8ff9447c10ac1e31bf
+  YooKassaWalletApi: 5fa5f93ebd08d926f8f4adaa5f50863ce6602013
+  YooMoneyCoreApi: 4f40673a79d11e95af850bb97f264995ac47a873
 
-PODFILE CHECKSUM: 9cd1d12b0c742d48cbf6439387971b64d77c00c2
+PODFILE CHECKSUM: 82dc65b2828306081b6e3e687672222375535481
 
 COCOAPODS: 1.10.0

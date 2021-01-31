@@ -42,12 +42,19 @@
 		EA90E29F256BB34300C473B8 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA90E29E256BB34300C473B8 /* AuthController.swift */; };
 		EA90E2A1256BC06700C473B8 /* ModelFireBaseDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA90E2A0256BC06700C473B8 /* ModelFireBaseDB.swift */; };
 		EA9212E5256E3004003D084E /* ImageOfSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9212E4256E3004003D084E /* ImageOfSlider.swift */; };
+		EA925F4725C73387006C1B29 /* TMXProfiling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA925F4625C7337C006C1B29 /* TMXProfiling.framework */; };
+		EA925F4825C73387006C1B29 /* TMXProfiling.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA925F4625C7337C006C1B29 /* TMXProfiling.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA925F4925C73387006C1B29 /* TMXProfilingConnections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA925F4525C7337C006C1B29 /* TMXProfilingConnections.framework */; };
+		EA925F4A25C73387006C1B29 /* TMXProfilingConnections.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA925F4525C7337C006C1B29 /* TMXProfilingConnections.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EA93946525779FB600EB6EDF /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93946425779FB600EB6EDF /* FavoriteViewController.swift */; };
 		EA9394672577BEB000EB6EDF /* ActionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9394662577BEB000EB6EDF /* ActionController.swift */; };
 		EA95FC6B258154760045AC33 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA95FC6A258154760045AC33 /* Colors.xcassets */; };
 		EA95FC6E258155DF0045AC33 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA95FC6D258155DF0045AC33 /* UIImageViewExtension.swift */; };
 		EA975DF5256AD4CC0094C4B6 /* MainListTableCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA975DF4256AD4CC0094C4B6 /* MainListTableCardCell.swift */; };
 		EA975DF9256AD78A0094C4B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA975DF8256AD78A0094C4B6 /* GoogleService-Info.plist */; };
+		EAA1417C25C742EB00AC036A /* ModelPaymentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1417B25C742EB00AC036A /* ModelPaymentController.swift */; };
+		EAA32C7325B5BC2F005EEA69 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA32C7225B5BC2F005EEA69 /* PayViewController.swift */; };
+		EAA32C7525B5C331005EEA69 /* PayView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA32C7425B5C331005EEA69 /* PayView.storyboard */; };
 		EABAABF6256CE11000F69698 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABAABF5256CE11000F69698 /* ProfileController.swift */; };
 		EABAABFD256D0E8E00F69698 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EABAABFC256D0E8E00F69698 /* Main.storyboard */; };
 		EAF909F32562A003006E6C55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF909F22562A003006E6C55 /* AppDelegate.swift */; };
@@ -57,6 +64,21 @@
 		EAF909FF2562A005006E6C55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF909FD2562A005006E6C55 /* LaunchScreen.storyboard */; };
 		F9FDC1AA92AD590B90C6ED2C /* Pods_YogaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C29C06F19832AD42C474A2F /* Pods_YogaApp.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EA925F4B25C73388006C1B29 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EA925F4825C73387006C1B29 /* TMXProfiling.framework in Embed Frameworks */,
+				EA925F4A25C73387006C1B29 /* TMXProfilingConnections.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4F652CD393A85892FC1F7169 /* Pods-YogaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YogaApp.debug.xcconfig"; path = "Target Support Files/Pods-YogaApp/Pods-YogaApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +122,8 @@
 		EA90E29E256BB34300C473B8 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		EA90E2A0256BC06700C473B8 /* ModelFireBaseDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFireBaseDB.swift; sourceTree = "<group>"; };
 		EA9212E4256E3004003D084E /* ImageOfSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOfSlider.swift; sourceTree = "<group>"; };
+		EA925F4525C7337C006C1B29 /* TMXProfilingConnections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TMXProfilingConnections.framework; sourceTree = "<group>"; };
+		EA925F4625C7337C006C1B29 /* TMXProfiling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TMXProfiling.framework; sourceTree = "<group>"; };
 		EA93946425779FB600EB6EDF /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		EA9394662577BEB000EB6EDF /* ActionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionController.swift; sourceTree = "<group>"; };
 		EA94B049256D960400DFDD0E /* AsanaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsanaController.swift; sourceTree = "<group>"; };
@@ -107,6 +131,9 @@
 		EA95FC6D258155DF0045AC33 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		EA975DF4256AD4CC0094C4B6 /* MainListTableCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListTableCardCell.swift; sourceTree = "<group>"; };
 		EA975DF8256AD78A0094C4B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EAA1417B25C742EB00AC036A /* ModelPaymentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPaymentController.swift; sourceTree = "<group>"; };
+		EAA32C7225B5BC2F005EEA69 /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
+		EAA32C7425B5C331005EEA69 /* PayView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PayView.storyboard; sourceTree = "<group>"; };
 		EABAABF5256CE11000F69698 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		EABAABFC256D0E8E00F69698 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EAF909EF2562A003006E6C55 /* YogaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YogaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +151,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9FDC1AA92AD590B90C6ED2C /* Pods_YogaApp.framework in Frameworks */,
+				EA925F4925C73387006C1B29 /* TMXProfilingConnections.framework in Frameworks */,
+				EA925F4725C73387006C1B29 /* TMXProfiling.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +311,15 @@
 			path = SettingViews;
 			sourceTree = "<group>";
 		};
+		EA925F4425C7337C006C1B29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA925F4525C7337C006C1B29 /* TMXProfilingConnections.framework */,
+				EA925F4625C7337C006C1B29 /* TMXProfiling.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		EA95FC66258153E00045AC33 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +344,7 @@
 			children = (
 				EA90E2A0256BC06700C473B8 /* ModelFireBaseDB.swift */,
 				EA8DDCBF257EC9B100C3A38C /* ModelAdController.swift */,
+				EAA1417B25C742EB00AC036A /* ModelPaymentController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -317,6 +356,7 @@
 				EA18DF1E258162F4006A52FF /* Auth */,
 				EA18DF2325816DBC006A52FF /* MainList */,
 				EA18DF1D258162ED006A52FF /* Action */,
+				EAA32C6F25B5BBBF005EEA69 /* Pay */,
 				EA18DF1C258161C8006A52FF /* Setting */,
 				EA18DF1B258161AC006A52FF /* Add */,
 			);
@@ -329,6 +369,15 @@
 				EA8DDCE3257EF11800C3A38C /* nativetemplates */,
 			);
 			path = Templates;
+			sourceTree = "<group>";
+		};
+		EAA32C6F25B5BBBF005EEA69 /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				EAA32C7425B5C331005EEA69 /* PayView.storyboard */,
+				EAA32C7225B5BC2F005EEA69 /* PayViewController.swift */,
+			);
+			path = Pay;
 			sourceTree = "<group>";
 		};
 		EAF909E62562A003006E6C55 = {
@@ -372,6 +421,7 @@
 		ECABA4FD9F30F24FD1A53E96 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA925F4425C7337C006C1B29 /* Frameworks */,
 				5C29C06F19832AD42C474A2F /* Pods_YogaApp.framework */,
 			);
 			name = Frameworks;
@@ -390,6 +440,8 @@
 				EAF909ED2562A003006E6C55 /* Resources */,
 				3529A39F85DA048B7CFF25C3 /* [CP] Embed Pods Frameworks */,
 				CA3A7BCBD90002C8575EE134 /* [CP] Copy Pods Resources */,
+				EA925F4B25C73388006C1B29 /* Embed Frameworks */,
+				EA925F4C25C733F2006C1B29 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -455,6 +507,7 @@
 				EA18DF2025816564006A52FF /* MainListView.storyboard in Resources */,
 				EA18DF1625815EF2006A52FF /* AddView.storyboard in Resources */,
 				EABAABFD256D0E8E00F69698 /* Main.storyboard in Resources */,
+				EAA32C7525B5C331005EEA69 /* PayView.storyboard in Resources */,
 				EA18DF18258160F8006A52FF /* AuthView.storyboard in Resources */,
 				EA95FC6B258154760045AC33 /* Colors.xcassets in Resources */,
 				EA18DF2925816FE3006A52FF /* AsanaView.storyboard in Resources */,
@@ -520,6 +573,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YogaApp/Pods-YogaApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EA925F4C25C733F2006C1B29 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\n#  Created by Samin Pour on 18/6/18.\n#  Copyright © 2018 ThreatMetrix. All rights reserved.\n#\n# ThreatMetrix iOS SDK contains multiple architectures, armv7, armv7s, arm64, x86_64. The arm\n# architectures are for devices, x86_64 is for simulators. When preparing application for publishing\n# Xcode removes simulator architectures from your application, but due to a bug / design flaw it\n# doesn't strip these slices from dynamic frameworks.\n#\n# If these architectures are not removed Apple will reject the binary.\n# http://www.openradar.me/radar?id=6409498411401216#ag9zfm9wZW5yYWRhci1ocmRyFAsSB0NvbW1lbnQYgICAuO-k9QgM\n# Possible error  messages in Xcode are\n# 1. “iTunes Store Operation Failed: Unsupported Architectures. The executable YourApp contains unsupported architectures '[(x86_64, i386)]'”\n# 2. “LC_ENCRYPTION_INFO”\n# 3. “Invalid Segment Alignment”\n# 4. “The binary is invalid.”\n# Removing simulator slices will resolve these issues.\n#\n# This script automatically strips unused architectures from ThreatMetrix framework, to use it please\n# add a new \"Run Script Phase\" to the build phase and add the content of this file there.\n#\n# IMPORTANT NOTE: Please make sure to add this script after \"Embed Frameworks\" / \"Copy File(s)\"  phase\n\n\nAPP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\nfind \"$APP_PATH\" -name 'TMX*.framework' -type d | while read -r FRAMEWORK; do\n    FRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\n    FRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\n\n    EXTRACTED_ARCHS=()\n\n    for ARCH in $ARCHS; do\n        lipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\n        EXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\n    done\n\n    lipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\n    rm \"${EXTRACTED_ARCHS[@]}\"\n\n    rm \"$FRAMEWORK_EXECUTABLE_PATH\"\n    mv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -533,6 +604,7 @@
 				EA8D86782583922800ABD6CF /* AddViewController.swift in Sources */,
 				EA8DDCC0257EC9B100C3A38C /* ModelAdController.swift in Sources */,
 				EA18DF2E258174EF006A52FF /* ThemeProtocol.swift in Sources */,
+				EAA1417C25C742EB00AC036A /* ModelPaymentController.swift in Sources */,
 				EA18DF41258189CA006A52FF /* LightTheme.swift in Sources */,
 				EA18DF43258189D7006A52FF /* DarkTheme.swift in Sources */,
 				EA9212E5256E3004003D084E /* ImageOfSlider.swift in Sources */,
@@ -554,6 +626,7 @@
 				EAF909F72562A003006E6C55 /* ViewController.swift in Sources */,
 				EAF909F32562A003006E6C55 /* AppDelegate.swift in Sources */,
 				EA18DF2C2581745E006A52FF /* Theme.swift in Sources */,
+				EAA32C7325B5BC2F005EEA69 /* PayViewController.swift in Sources */,
 				EA18DF3C25818790006A52FF /* ColorsProtocol.swift in Sources */,
 				EA18DF3F25818902006A52FF /* DefaultColors.swift in Sources */,
 				EA93946525779FB600EB6EDF /* FavoriteViewController.swift in Sources */,
@@ -699,6 +772,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 47RD4QFDAD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = YogaApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -719,6 +796,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 47RD4QFDAD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = YogaApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -17,7 +17,8 @@
                     <connections>
                         <segue destination="u0f-WO-ELZ" kind="relationship" relationship="viewControllers" id="Jhf-Hd-4Ql"/>
                         <segue destination="6C4-5L-kAp" kind="relationship" relationship="viewControllers" id="Xk3-bj-4fL"/>
-                        <segue destination="gWO-T9-wIw" kind="relationship" relationship="viewControllers" id="fGg-4b-Crw"/>
+                        <segue destination="ON8-Ah-MYR" kind="relationship" relationship="viewControllers" id="lOj-6x-jvK"/>
+                        <segue destination="gWO-T9-wIw" kind="relationship" relationship="viewControllers" id="gft-ch-5ok"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zoG-aN-QmN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -42,7 +43,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Lq-9A-J8R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-186" y="1712"/>
+            <point key="canvasLocation" x="-188" y="1807"/>
         </scene>
         <!--MainListView-->
         <scene sceneID="MGv-yT-6ld">
@@ -53,6 +54,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Npa-Eu-zSe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-178" y="1497"/>
+        </scene>
+        <!--PayView-->
+        <scene sceneID="mAN-Fa-FO2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PayView" id="ON8-Ah-MYR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="jST-nG-iEQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDw-Im-d8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-200" y="1719"/>
         </scene>
     </scenes>
 </document>

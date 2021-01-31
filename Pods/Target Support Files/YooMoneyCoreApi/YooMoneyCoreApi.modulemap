@@ -1,0 +1,6 @@
+framework module YooMoneyCoreApi {
+  umbrella header "YooMoneyCoreApi-umbrella.h"
+
+  export *
+  module * { export * }
+}

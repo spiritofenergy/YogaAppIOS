@@ -1,3 +1,6 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/yoomoney-tech/cocoa-pod-specs.git'
+
 # Uncomment the next line to define a global platform for your project
 platform :ios, '13.6'
 
@@ -17,5 +20,9 @@ target 'YogaApp' do
   pod 'Firebase/Storage'
   pod 'MBCircularProgressBar'
   pod 'Google-Mobile-Ads-SDK'
+
+  pod 'YooKassaPayments',
+    :git => 'https://github.com/yoomoney/yookassa-payments-swift.git',
+    :tag => '5.1.0'
 
 end

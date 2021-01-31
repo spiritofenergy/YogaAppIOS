@@ -1,0 +1,65 @@
+{
+  "name": "YooKassaPayments",
+  "version": "5.1.0",
+  "homepage": "https://github.com/yoomoney/yookassa-payments-swift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": "YooMoney",
+  "summary": "YooKassa Payments",
+  "source": {
+    "git": "https://github.com/yoomoney/yookassa-payments-swift.git",
+    "tag": "5.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "swift_versions": "5.0",
+  "ios": {
+    "source_files": [
+      "YooKassaPayments/**/*.{h,swift}",
+      "YooKassaPayments/*.{h,swift}"
+    ],
+    "resources": [
+      "YooKassaPayments/Public/Resources/*.xcassets",
+      "YooKassaPayments/Public/Resources/**/*.plist",
+      "YooKassaPayments/Public/Resources/**/*.json",
+      "YooKassaPayments/Public/Resources/*.lproj/*.strings"
+    ],
+    "frameworks": "PassKit",
+    "libraries": "z",
+    "vendored_frameworks": [
+      "Frameworks/TMXProfiling.framework",
+      "Frameworks/TMXProfilingConnections.framework"
+    ],
+    "dependencies": {
+      "FunctionalSwift": [
+        "~> 1.2.0"
+      ],
+      "When": [
+        "~> 4.0.0"
+      ],
+      "YooMoneyCoreApi": [
+        "~> 1.9.0"
+      ],
+      "YooKassaPaymentsApi": [
+        "~> 2.3.0"
+      ],
+      "YooKassaWalletApi": [
+        "~> 2.2.0"
+      ],
+      "YandexMobileMetrica/Dynamic": [
+        "~> 3.12.0"
+      ],
+      "MoneyAuth": [
+        "~> 2.0.0"
+      ]
+    }
+  },
+  "pod_target_xcconfig": {
+    "OTHER_LDFLAGS": "-framework \"TMXProfiling\"",
+    "FRAMEWORK_SEARCH_PATHS": "\"${PODS_ROOT}/../Frameworks\""
+  },
+  "swift_version": "5.0"
+}

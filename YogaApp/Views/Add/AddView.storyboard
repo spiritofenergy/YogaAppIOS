@@ -29,11 +29,15 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="goj-Wm-5YZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Добавление" image="plus" catalog="system" id="glu-32-MzP"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HOe-rH-gVi">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0vq-B5-epE">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="sEO-qI-biz" kind="relationship" relationship="rootViewController" id="WFn-iY-UYk"/>
                     </connections>

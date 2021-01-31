@@ -31,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         
+        ModelFireBaseDB.objectDB.getUserPromo()
         ModelFireBaseDB.objectDB.getCards()
         
         return true
